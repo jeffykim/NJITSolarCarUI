@@ -2,6 +2,8 @@ package app;
 
 import java.util.Map;
 
+import javafx.scene.web.WebView;
+
 
 
 /**
@@ -20,6 +22,6 @@ public interface DataInputController {
 	/**
 	 * Resets the UI to an initialized default state
 	 */
-	public void reset();
+	public void reset(WebView wv);
 	
 }
