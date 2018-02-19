@@ -21,8 +21,13 @@ public class UI extends JFrame
     public  JLabel JLSpeedometer;
     public static JLabel JLSpeed;
     public  JLabel JLMap;
+    public static SerialReader serial;
 
-    public UI(){createUserInterface();}
+    public UI(){
+    	serial = new SerialReader("/dev/tty.usbmodem14511");
+    	createUserInterface();
+    	
+    }
 
     private void createUserInterface()
     {
@@ -156,13 +161,13 @@ public class UI extends JFrame
 
         double batTemp = Math.round((0.0 + (50.0 - 0.0) * rand.nextDouble()) * 100.0) / 100.0; //rangeMin + (rangeMax - rangeMin) * random double
         double MRemain = Math.round(((100.0 - 0.0) *rand.nextDouble())*100.0) / 100.0;
-        int SPD = rand.nextInt(40) + 10;
+        String SPD = serial.readHex();
         int batPercent = rand.nextInt(100)+1;
 
-        if(SPD >= 40)
-            JLSpeed.setForeground(Color.RED);
-          else
-            JLSpeed.setForeground(Color.BLACK);
+        //if(SPD >= 40)
+         //   JLSpeed.setForeground(Color.RED);
+         // else
+           // JLSpeed.setForeground(Color.BLACK);
 
         JLBatTemp.setText("Battery Temp: " + batTemp + "F");
         JLBatPercent.setText(batPercent + " % ");
