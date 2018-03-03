@@ -1,0 +1,74 @@
+// Simple CAN Shield Test
+#include <stdlib.h>
+#include "mcp_can.h"
+#include <SPI.h>
+MCP_CAN CAN0(9); // Set CS to pin 9
+//CAN0.begin(MCP_ANY,CAN_250KBPS, MCP_20MHZ
+
+// Test message
+unsigned char stmp[8] = {0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37};
+
+// SYSTEM: Setup routine runs on power-up or reset
+void setup() {
+
+// Set the serial interface baud rate
+Serial.begin(9600);
+
+// Initialize the CAN controller
+
+// Baud rates defined in mcp_can_dfs.h
+//
+if (CAN0.begin(MCP_ANY,CAN_250KBPS, MCP_20MHZ) == CAN_OK){
+  Serial.print("CAN Init OK.\n\r\n\r");
+}
+else {
+  Serial.print("CAN Init Failed.\n\r");
+}
+
+
+}// end setup
+
+// Main Loop - Arduino Entry Point
+void loop()
+{
+// Declarations
+byte nMsgLen = 0;
+byte nMsgBuffer[8];
+char sString[4];
+
+// Send out a test message
+// Send data: id = 0x1FF, extended frame, data len = 8, stmp: data buf
+// ID mode (11/29 bit) defined in mcp_can_dfs.h
+CAN0.sendMsgBuf(0x1FF, CAN_EXTID, 8, stmp);
+
+// Check for a message
+if(CAN0.checkReceive() == CAN_MSGAVAIL) {
+// Read the message buffer
+//*id, *ext, *len, buf[]
+CAN0.readMsgBuf(0x1FF, CAN_EXTID, &nMsgLen, &nMsgBuffer[0]);
+
+////mcp_addr, ext*, id*
+//INT32U nMsgID = CAN0.mcp2515_read_id( 0x0, CAN_EXTID, 0x1FF);
+//
+//// Print message ID to serial monitor
+//Serial.print("Message ID: 0x");
+//if(nMsgID < 16) Serial.print("0");
+//Serial.print(itoa(nMsgID, sString, 16));
+//Serial.print("\n\r");
+
+// Print data to serial monitor
+Serial.print("Data: ");
+for(int nIndex = 0; nIndex < nMsgLen; nIndex++) {
+  Serial.print("0x");
+  if(nMsgBuffer[nIndex] < 16) Serial.print("0");
+  Serial.print(itoa(nMsgBuffer[nIndex], sString, 16));
+  Serial.print(" ");
+}// end for
+Serial.print("\n\r\n\r");
+
+}// end if
+
+// Run in 1 sec interval
+delay(1000);
+
+}// end loop
