@@ -1,4 +1,7 @@
 import jssc.SerialPort;
+
+import java.io.UnsupportedEncodingException;
+import java.util.Date;
 import jssc.SerialPortException;
 public class SerialReader {
 	private static SerialPort serialPort; 
@@ -34,9 +37,28 @@ public class SerialReader {
 		return ""+hex;}
 		return "";
 	}catch(SerialPortException ex) {
-		return ""+ex;
+		return ""+ex;}
 	}
+	public String readByte() throws UnsupportedEncodingException {
+		try{
+			String bytes = new String(serialPort.readBytes());
+			if(bytes!=null) {
+			//int ret = Integer.parseInt(hex,16);
+			
+			return bytes; }
+			return null;
+		}catch(SerialPortException ex) {
+			return ""+ex;
+		}
 	
+	}
+	public String convertHex(String bytes) {
+		
+		StringBuilder str = new StringBuilder();
+		for(int i = 0; i<bytes.length();i+=2) {
+			str.append((char) Integer.parseInt(bytes.substring(i, i+2),16));
+		}
+		return str.toString();
 	}
 //	public int[] readIntArr() {
 //		try{

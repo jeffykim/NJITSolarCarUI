@@ -21,23 +21,25 @@ public class UI extends JFrame
     public  JLabel JLSpeedometer;
     public static JLabel JLSpeed;
     public  JLabel JLMap;
-
-    public UI(){createUserInterface();}
+    public static SerialReader serial;
+    public static Spoof fake;
+    
+    public UI(){
+   	//serial = new SerialReader("/dev/cu.usbmodem1411");
+    	createUserInterface();
+    	fake = new Spoof();
+    	
+    }
 
     private void createUserInterface()
     {
         Container contentPane = frame1.getContentPane();
         contentPane.setLayout(null);
-        contentPane.setBackground(Color.GRAY);
-        contentPane.setBounds(0,0,400,500);
-
-        JLayeredPane JLPane = frame1.getLayeredPane();
-        JLPane.setBounds(400,0,400,500);
-        JLPane.setBorder(BorderFactory.createLineBorder(Color.BLACK,1));
 
         frame1.setTitle("UI");
         frame1.setSize(800,500);
         frame1.setVisible(true);
+        //frame1.setResizable(false);
 
         /*JLTelemetry = new JLabel("Telemetry Data");
         JLTelemetry.setBounds(0,0,400,30);
@@ -46,7 +48,7 @@ public class UI extends JFrame
         JLTelemetry.setFont(new Font("Ariel",Font.BOLD,25));
         contentPane.add(JLTelemetry);*/
 
-        JLBatTemp = new JLabel("Battery Temp: " + 0 + "F");
+        JLBatTemp = new JLabel("Battery Temp: " + 70 + "F");
         JLBatTemp.setBounds(200,10,200,50);
         JLBatTemp.setHorizontalAlignment(SwingConstants.LEFT);
         //JLBatTemp.setBorder(BorderFactory.createLineBorder(Color.black,1));
@@ -113,8 +115,8 @@ public class UI extends JFrame
         JLMap = new JLabel();
         JLMap.setBounds(400,0,376,458);
         JLMap.setIcon(new ImageIcon("D:\\Other\\UI_JFrame\\mapfinal.jpg"));
-        JLMap.setBorder(BorderFactory.createLineBorder(Color.BLACK,1));
-        JLPane.add(JLMap,1);
+        //JLMap.setBorder(BorderFactory.createLineBorder(Color.BLACK,1));
+        contentPane.add(JLMap,new Integer(2));
 
         /*JLSpeedometer = new JLabel("Battery");
         JLSpeedometer.setBounds(75,260,200,50);
@@ -127,15 +129,13 @@ public class UI extends JFrame
         JLSpeed.setBounds(0,60,400,330);
         JLSpeed.setHorizontalAlignment(SwingConstants.CENTER);
         //JLSpeed.setBorder(BorderFactory.createLineBorder(Color.BLACK,1));
-        JLSpeed.setFont(new Font("Ariel",Font.BOLD,35));
+        JLSpeed.setFont(new Font("Ariel",Font.BOLD,15));
         contentPane.add(JLSpeed);
 
         JLCar = new JLabel();
-        JLCar.setBounds(425,10,10,10);
-        JLCar.setBorder(BorderFactory.createLineBorder(Color.black,1));
-        JLCar.setOpaque(true);
+        JLCar.setBounds(400,100,50,50);
         JLCar.setBackground(Color.RED);
-        JLPane.add(JLCar,0 );
+        contentPane.add(JLCar);
 
 //Speed, bat%, Bat temp, Miles Remaining, Efficiency
     }
@@ -155,31 +155,26 @@ public class UI extends JFrame
             }
         };
 
-        timer.schedule(gen,0,2000);
+        timer.schedule(gen,0,250);
     }
 
     public static void PsudoValues() {
         Random rand = new Random();
+        fake.update();
+        //double batTemp = Math.round((0.0 + (50.0 - 0.0) * rand.nextDouble()) * 100.0) / 100.0; //rangeMin + (rangeMax - rangeMin) * random double
+        int MRemain = fake.milesRemaining();
+        int SPD = fake.mph();//+fake.SoC()+fake.milesRemaining()+"";
+        //System.out.println(SPD);
+        int batPercent = fake.Charge();
 
-        double batTemp = Math.round((0.0 + (50.0 - 0.0) * rand.nextDouble()) * 100.0) / 100.0; //rangeMin + (rangeMax - rangeMin) * random double
-        double MRemain = Math.round(((100.0 - 0.0) *rand.nextDouble())*100.0) / 100.0;
-        double Lat_In = 40.580190, Long_In = -98.349237; //random double number
-        int SPD = rand.nextInt(40) + 10;
-        int batPercent = rand.nextInt(100)+1;
+        //if(SPD >= 40)
+         //   JLSpeed.setForeground(Color.RED);
+         // else
+           // JLSpeed.setForeground(Color.BLACK);
 
-        int x = (int)Math.ceil(400+(Long_In-(-98.353633))*53149.08318);
-        int y = (int)Math.ceil(458-((Lat_In-40.575737)*74149.62682));
-
-        JLCar.setBounds(x,y,10,10);
-
-        if(SPD >= 40)
-            JLSpeed.setForeground(Color.RED);
-          else
-            JLSpeed.setForeground(Color.BLACK);
-
-        JLBatTemp.setText("Battery Temp: " + batTemp + "F");
+        //JLBatTemp.setText("Battery Temp: " + batTemp + "F");
         JLBatPercent.setText(batPercent + " % ");
         JLMilesRem.setText("Miles Remain: " + MRemain);
-        JLSpeed.setText(SPD + " mph");
+        JLSpeed.setText(""+SPD+" mph");
     }
 }
