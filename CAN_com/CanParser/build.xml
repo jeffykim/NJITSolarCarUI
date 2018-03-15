@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="deploy" name="Create Runnable Jar for Project CanParser">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="${dir.buildfile}/dist"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/CanParser.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="edu.njit.solarcar.telemetry.CanTest.CanReaderTest"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${dir.buildfile}/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/lib/libsocket-can-java-master/dist/libsocket-can-java.jar"/>
+        </jar>
+    </target>
+	
+	<target name="deploy" depends="create_run_jar">
+		<scp file="dist/CanParser"
+			todir="pi:raspberry@solarcar-telemetry-raspi.local:~/Desktop/CanParser.java"
+			trust="true" 
+			failonerror="true"
+			sftp="true"
+			port="22"/>
+	</target>
+</project>
