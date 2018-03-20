@@ -25,6 +25,11 @@ public class CanReader
 	private double laccY;
 	private double laccZ;
 	
+	//Battery cell broadcast
+	private double instantVoltage;
+	private double internalResistance;
+	private double openVoltage;
+	
 	// gyroscope
 	private double gyroX;
 	private double gyroY;
@@ -108,6 +113,12 @@ public class CanReader
 				packTemp = (double)(((int)data[4] << 8) + data[5]);
 				break;
 			}
+			case 0x6B2: { //BMS 3
+				instantVoltage = (double)(((int)data[0] << 8)+data[1])/10000;
+				internalResistance = (double)(((int)data[2]<<8)+data[3])/100000;
+				openVoltage = (double)(((int)data[4] <<8)+data[5])/10000;
+				
+			}
 			case 0x100: { // Arduino Gravity Acceleration
 				gaccX = ((double)(((int)data[0] << 8) + data[1])) / 256;
 				gaccY = ((double)(((int)data[2] << 8) + data[3])) / 256;
@@ -174,6 +185,8 @@ public class CanReader
 		builder.append(", potVal=");
 		builder.append(potVal);
 		builder.append("]");
+		builder.append(", internal voltage = ");
+		builder.append(this.internalResistance);
 		return builder.toString();
 	}
 
@@ -255,6 +268,15 @@ public class CanReader
 
 	public double getPackTemp() {
 		return packTemp;
+	}
+	public double getInternalVoltage() {
+		return this.instantVoltage;
+	}
+	public double getInternalResistance() {
+		return this.internalResistance;
+	}
+	public double getOpenVoltage() {
+		return this.openVoltage;
 	}
 	
 	
