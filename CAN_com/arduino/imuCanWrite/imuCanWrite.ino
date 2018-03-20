@@ -3,6 +3,7 @@
 
 #include <mcp_can.h>
 #include <SPI.h>
+#include <Servo.h>
 
 #include "NineAxesMotion.h"
 #include <Wire.h>
@@ -31,6 +32,8 @@ float gyroZ;
 
 float potVal;
 
+long lastMillis = 0;
+Servo mot;
 
 void setup()
 {
@@ -49,25 +52,43 @@ void setup()
     imu.initSensor();
     imu.setOperationMode(OPERATION_MODE_NDOF);
     imu.setUpdateMode(AUTO);
+
+    // Motor driver
+    mot.attach(45);
+    pinMode(31, INPUT);
 }
 
 
 void loop()
 {
-  // Read the 9 axis data in
-  imu.readGravAccel(gaccX, gaccY, gaccZ);
-  imu.readLinearAccel(laccX, laccY, laccZ);
-  imu.readGyro(gyroX, gyroY, gyroZ);
-
-  potVal = (float)analogRead(A0)/8;
-  Serial.println(potVal);
+  if(millis() > lastMillis + 250) {
+    lastMillis = millis();
+    
+    // Read the 9 axis data in
+    imu.readGravAccel(gaccX, gaccY, gaccZ);
+    imu.readLinearAccel(laccX, laccY, laccZ);
+    imu.readGyro(gyroX, gyroY, gyroZ);
   
-  fmtSendCanFrame(gaccX, gaccY, gaccZ, canBuf, 0x100);
-  fmtSendCanFrame(laccX, laccY, laccZ, canBuf, 0x101);
-  fmtSendCanFrame(gyroX, gyroY, gyroZ, canBuf, 0x102);
-  fmtSendCanFrame(potVal, 0, 0, canBuf, 0x103);
+    potVal = (float)analogRead(A0)/8;
+    Serial.println(potVal);
+    
+    fmtSendCanFrame(gaccX, gaccY, gaccZ, canBuf, 0x100);
+    fmtSendCanFrame(laccX, laccY, laccZ, canBuf, 0x101);
+    fmtSendCanFrame(gyroX, gyroY, gyroZ, canBuf, 0x102);
+    fmtSendCanFrame(potVal, 0, 0, canBuf, 0x103);
+  }
 
-  delay(250);
+  int potRaw = analogRead(A0);
+  byte isFwd = digitalRead(31);
+  int motVal = 0;
+  if(isFwd) {
+    motVal = map(potRaw, 0, 1023, 0, 90);
+  } else {
+    motVal = map(potRaw, 0, 1023, 90, 0);
+  }
+
+  mot.write(motVal);
+  delay(25);
 }
 
 
