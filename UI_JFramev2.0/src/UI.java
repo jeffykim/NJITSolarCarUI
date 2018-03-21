@@ -17,11 +17,16 @@ public class UI extends JFrame
     public  JLabel JLMap;
     public static FileRead coordsReader;
     public static spoof fake;
+    public static CanReader can;
+    
 
-    public UI()
+    public UI() throws IOException 
     {
         createUserInterface();
         fake = new spoof();
+        
+        can = new CanReader(true);
+        can.startPollingLoop(500000);
     }
 
     private void createUserInterface()
@@ -76,7 +81,7 @@ public class UI extends JFrame
         JLPane.add(JLCar,0 );
 
     }
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException
     {
         frame1 = new JFrame("UI");
         UI application = new UI();
@@ -132,6 +137,7 @@ public class UI extends JFrame
         double Lat_In = 40.581613, Long_In = -98.347368; //random double number
         int SPD = fake.mph();
         int batPercent = fake.Charge();
+        
 
         //int x = (int)Math.ceil((400+(Long_In-(-98.353633))*49694.39277)-5);
         //int y = (int)Math.ceil((454-((Lat_In-40.575737)*73617.64229))-5);
