@@ -18,6 +18,18 @@ public class UI extends JFrame
     public static FileRead coordsReader;
     public static spoof fake;
     public static CanReader can;
+    public static double internalVoltage;
+    public static double potValue;
+    public static int mps;
+    public static double fullCharge = 44.22; //watt/hrs
+    public static double socOriginal = 100; //percentage
+    public static double Cr = 0.008;
+    public static double Cd = 0.1;
+    public static double A = 0.0959; //m^2
+    public static int mass = 317; //kg
+    public static  double SoC;
+    public static double milesRemaining;
+    public static double mph;
     
 
     public UI() throws IOException 
@@ -137,7 +149,12 @@ public class UI extends JFrame
         double Lat_In = 40.581613, Long_In = -98.347368; //random double number
         int SPD = fake.mph();
         int batPercent = fake.Charge();
-        
+        potValue = can.getPotVal();
+        internalVoltage = can.getInternalVoltage();
+        mps = (int) (potValue/3.938);
+        SoC = ((-mps/0.04422*100) + 44.22);
+        mph = mps*2.23694;
+        milesRemaining = mps*(44.22/((mass*9.8*Cr)+(.5*1.2*Cd*A*mps*mps)*mps)) ;
 
         //int x = (int)Math.ceil((400+(Long_In-(-98.353633))*49694.39277)-5);
         //int y = (int)Math.ceil((454-((Lat_In-40.575737)*73617.64229))-5);
@@ -149,11 +166,11 @@ public class UI extends JFrame
             JLSpeed.setForeground(Color.BLACK);
 
         if (batPercent <= 20)
-            JLBatPercent.setText(batPercent +" % "+"Battery Critical!!");
+            JLBatPercent.setText(SoC +" % "+"Battery Critical!!");
         else
-            JLBatPercent.setText(batPercent + " % ");
+            JLBatPercent.setText(SoC + " % ");
 
-        JLMilesRem.setText("Miles Remain: " + MRemain);
-        JLSpeed.setText(SPD + " mph");
+        JLMilesRem.setText("Miles Remain: " + milesRemaining);
+        JLSpeed.setText(mph + " mph");
     }
 }
