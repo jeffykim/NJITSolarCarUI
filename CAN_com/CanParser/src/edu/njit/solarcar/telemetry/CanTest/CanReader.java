@@ -1,6 +1,7 @@
-package edu.njit.solarcar.telemetry.CanTest;
 
 import java.io.IOException;
+
+
 
 import javax.xml.bind.DatatypeConverter;
 
@@ -9,17 +10,17 @@ import de.entropia.can.CanSocket.CanFrame;
 import de.entropia.can.CanSocket.CanInterface;
 import de.entropia.can.CanSocket.Mode;
 
-public class CanReader 
+public class CanReader
 {
 	private CanSocket sock;
-	
+
 	private boolean shutdown;
-	
+
 	// gravity acceleration
-	private double gaccX;
+	private double gaccX; 
 	private double gaccY;
 	private double gaccZ;
-	
+
 	// linear acceleration
 	private double laccX;
 	private double laccY;
@@ -29,15 +30,14 @@ public class CanReader
 	private double instantVoltage;
 	private double internalResistance;
 	private double openVoltage;
-	
 	// gyroscope
 	private double gyroX;
 	private double gyroY;
 	private double gyroZ;
-	
+
 	//Misc. Arduino
 	private double potVal;
-	
+
 	// BMS data
 	private double packCurrent;
 	private double packInstVolts;
@@ -45,18 +45,20 @@ public class CanReader
 	private double relayState;
 	private double packDCL;
 	private double packTemp;
-	
-	
+	private CanInterface canIF;
+
+
 
 	public CanReader(boolean startShellModule) throws IOException {
 		if(startShellModule) {
 			Runtime.getRuntime().exec("sudo sh ~/initCan.sh");
 		}
 		sock = new CanSocket(Mode.RAW);
-		sock.bind(new CanInterface(sock, "can0"));
+		canIF = new CanInterface(sock, "can0");
+		sock.bind(canIF);
 	}
-	
-	
+
+
 	/**
 	 * Starts a daemon to continuously grab any buffered CAN data
 	 * @param pollRate
@@ -69,7 +71,7 @@ public class CanReader
 					CanFrame frame = sock.recv();
 					if(frame != null)
 						parseFrame(frame);
-					
+
 					if(pollRate > 0) // only delay if needed
 						Thread.sleep(pollRate);
 				} catch (Exception e) {
@@ -82,8 +84,8 @@ public class CanReader
 		t.setName("CAN Polling");
 		t.start();
 	}
-	
-	
+
+
 	/**
 	 * Prints a frame to stout
 	 * @param frame
@@ -94,12 +96,12 @@ public class CanReader
 		String hexDat = DatatypeConverter.printHexBinary(data);
 		System.out.printf("Frame => id:%X data: %s\n", id, hexDat);
 	}
-	
-	
+
+
 	public void parseFrame(CanFrame frame) {
 		int id = frame.getCanId().getCanId_SFF();
 		byte[] data = frame.getData();
-		
+
 		switch(id) { // extract the proper frame info, update the respective variables
 			case 0x6B0: { // BMS 1
 				packCurrent = (double)data[0];
@@ -107,16 +109,16 @@ public class CanReader
 				packSoc = (double)data[4];
 				relayState = (double)data[7];
 				break;
-			}	
+			}
 			case 0x6B1: { // BMS 2
 				packDCL = (double)data[0];
 				packTemp = (double)(((int)data[4] << 8) + data[5]);
 				break;
 			}
 			case 0x6B2: { //BMS 3
-				instantVoltage = (double)(((int)data[0] << 8)+data[1])/10000;
-				internalResistance = (double)(((int)data[2]<<8)+data[3])/100000;
-				openVoltage = (double)(((int)data[4] <<8)+data[5])/10000;
+				instantVoltage = (double)(((int)data[0] << 8)+data[1]);
+				internalResistance = (double)(((int)data[2]<<8)+data[3]);
+				openVoltage = (double)(((int)data[4] <<8)+data[5]);
 				
 			}
 			case 0x100: { // Arduino Gravity Acceleration
@@ -185,8 +187,6 @@ public class CanReader
 		builder.append(", potVal=");
 		builder.append(potVal);
 		builder.append("]");
-		builder.append(", internal voltage = ");
-		builder.append(this.internalResistance);
 		return builder.toString();
 	}
 
@@ -279,17 +279,9 @@ public class CanReader
 		return this.openVoltage;
 	}
 	
-	
-	
+	public CanInterface getCanIF() {
+		return canIF;
+	}
+
 
 }
-
-
-
-
-
-
-
-
-
-
