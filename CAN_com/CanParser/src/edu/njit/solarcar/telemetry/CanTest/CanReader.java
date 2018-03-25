@@ -1,4 +1,4 @@
-
+package edu.njit.solarcar.telemetry.CanTest;
 import java.io.IOException;
 
 
@@ -104,9 +104,9 @@ public class CanReader
 
 		switch(id) { // extract the proper frame info, update the respective variables
 			case 0x6B0: { // BMS 1
-				packCurrent = (double)data[0];
-				packInstVolts = (double)data[2];
-				packSoc = (double)data[4];
+				packCurrent = ((double)(((int)data[0] << 8) + data[1])) / 10;
+				packInstVolts = ((double)(((int)data[2] << 8) + data[3])) / 10;
+				packSoc = /*((double)(((int)data[4] << 8) + data[5])) / 200;*/ ((double)data[4]) / 200;
 				relayState = (double)data[7];
 				break;
 			}

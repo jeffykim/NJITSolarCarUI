@@ -1,15 +1,18 @@
+package edu.njit.solarcar.telemetry.CanTest;
+
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileRead
 {
     private Scanner coordsReader;
-    private File coordsFile;
+    private InputStream coordsFile;
     private ArrayList<XYCoordinate> coordsList;
 
-    public FileRead(File coordsFile) throws IOException {
+    public FileRead(InputStream coordsFile) throws IOException {
         coordsReader = new Scanner(coordsFile);
         this.coordsFile = coordsFile;
         coordsList = new ArrayList<>();

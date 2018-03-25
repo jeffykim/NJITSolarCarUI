@@ -1,3 +1,5 @@
+package edu.njit.solarcar.telemetry.CanTest;
+
 public class XYCoordinate {
     public int x;
     public int y;

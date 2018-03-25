@@ -1,3 +1,6 @@
+package edu.njit.solarcar.telemetry.CanTest;
+
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
@@ -20,7 +23,7 @@ public class UI extends JFrame
     public static CanReader can;
     public static double internalVoltage;
     public static double potValue;
-    public static int mps;
+    public static double mps;
     public static double fullCharge = 44.22; //watt/hrs
     public static double socOriginal = 100; //percentage
     public static double Cr = 0.008;
@@ -37,7 +40,9 @@ public class UI extends JFrame
     public static double curcharge;
     public static double vol; 
     public static double mah = 3.35;
-    
+    public static double totalCharge = 44.22;
+    public static double maxvol;
+    public static double minvol;
     public UI() throws IOException 
     {
     		counter = 0;
@@ -46,14 +51,17 @@ public class UI extends JFrame
     		avgmtph = 0;
         curcharge = 0;
         vol = 0;
+        maxvol = 16.8;
+        minvol = 10;
+        milesRemaining = 100;
         createUserInterface();
         fake = new spoof();
         
         can = new CanReader(true);
-        can.startPollingLoop(500000);
+        can.startPollingLoop(5);
     }
 
-    private void createUserInterface()
+    private void createUserInterface() throws IOException
     {
         Container contentPane = frame1.getContentPane();
         contentPane.setLayout(null);
@@ -88,7 +96,7 @@ public class UI extends JFrame
 
         JLMap = new JLabel();
         JLMap.setBounds(400,0,376,458);
-        JLMap.setIcon(new ImageIcon("D:\\Other\\UI_JFrame\\src\\mapfinal.jpg"));
+        JLMap.setIcon(new ImageIcon(ImageIO.read(UI.class.getResourceAsStream("mapfinal.jpg"))));
         //JLMap.setBorder(BorderFactory.createLineBorder(Color.BLACK,1));
         JLPane.add(JLMap,1);
 
@@ -121,28 +129,29 @@ public class UI extends JFrame
             }
         };
 
-        timer.schedule(gen,0,2000);
+        timer.schedule(gen,0,50);
 
 
         Thread daemon = new Thread(() -> {
-            int delay = 300;
-
-            File cfil = new File(UI.class.getProtectionDomain().getCodeSource().getLocation().getFile() +"/coordinates.txt");
-            System.out.println(cfil);
+            int delayMin = 100;
+            int delayMax = 1000;
+            int minSpeed = 3;
+            int maxSpeed = 65;
             try {
-                coordsReader = new FileRead(cfil);
+                coordsReader = new FileRead(UI.class.getResourceAsStream("coordinates.txt"));
                 java.util.List<XYCoordinate> coords = coordsReader.getCoordsList();
                 int currIdx = 0;
                 while(true) {
                     XYCoordinate c = coords.get(currIdx);
                     JLCar.setBounds((c.x)+400,c.y,10,10);
-                    currIdx++;
+                    if(mph >= minSpeed)
+                    	currIdx++;
                     if(currIdx >= coords.size())
                         currIdx = 0;
                     // PSEUDOCODE
                     //delay = readPotDelay();
 
-                    try { Thread.sleep((long) (300-(mph*2))); } catch (Exception e) {}
+                    try { Thread.sleep((long)map(mph, minSpeed, maxSpeed, delayMax, delayMin)); } catch (Exception e) {}
                 }
 
             } catch (IOException e) {
@@ -152,10 +161,16 @@ public class UI extends JFrame
         daemon.setDaemon(true);
         daemon.start();
     }
+    
+    
+    private static double map(double x, double in_min, double in_max, double out_min, double out_max)
+    {
+    	return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+    }
+    
 
     public static void PsudoValues() {
-        
-    		Random rand = new Random();
+    	Random rand = new Random();
         fake.update();
         //double batTemp = Math.round((0.0 + (50.0 - 0.0) * rand.nextDouble()) * 100.0) / 100.0; //rangeMin + (rangeMax - rangeMin) * random double
         double MRemain = fake.milesRemaining();
@@ -163,17 +178,19 @@ public class UI extends JFrame
         int SPD = fake.mph();
         int batPercent = fake.Charge();
         potValue = can.getPotVal();
-        internalVoltage = can.getInternalVoltage();
-        mps = (int) (potValue/3.938);
-        SoC = ((-mps/0.04422*100) + 44.22);
-        vol = can.getInternalVoltage();
+        internalVoltage = can.getPackInstVolts();
+        mps = potValue * 0.02867909638; 
+        //((-mps/0.04422*100) + 44.22);
+        vol = can.getPackInstVolts();
         curcharge = vol*mah;
+        SoC = can.getPackSoc();
+        //can.getPackSoc();//curcharge/totalCharge; 
         mph = mps*2.23694;
-        summph = summph+mph;
+        summph = summph+mph*(1.38E-5); // integrate mph
         counter += 1;
         avgmph = summph/counter;
         avgmtph = (avgmph/2.23694)/3600;
-        milesRemaining = avgmtph*curcharge;
+        milesRemaining = milesRemaining - avgmtph*curcharge;
         	
         		
         	//mps*(44.22/((mass*9.8*Cr)+(.5*1.2*Cd*A*mps*mps)*mps)) ;
@@ -181,17 +198,17 @@ public class UI extends JFrame
         //int y = (int)Math.ceil((454-((Lat_In-40.575737)*73617.64229))-5);
 
 
-        if(SPD >= 40)
+        if(mph >= 40)
             JLSpeed.setForeground(Color.RED);
           else
             JLSpeed.setForeground(Color.BLACK);
 
-        if (batPercent <= 20)
-            JLBatPercent.setText(SoC +" % "+"Battery Critical!!");
-        else
-            JLBatPercent.setText(SoC + " % ");
+//        if (batPercent <= 20)
+//            JLBatPercent.setText(SoC*100 +" % "+"Battery Critical!!");
+//        else
+            JLBatPercent.setText(String.format("%.1f%%", SoC * 100));
 
-        JLMilesRem.setText("Miles Remain: " + milesRemaining);
-        JLSpeed.setText(mph + " mph");
+        JLMilesRem.setText(String.format("Miles Remaining: %d", (int)(SoC * 150)));
+        JLSpeed.setText(String.format("%.1f mph", mph));
     }
 }

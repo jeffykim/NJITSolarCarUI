@@ -1,3 +1,5 @@
+package edu.njit.solarcar.telemetry.CanTest;
+
 import java.util.HashMap;
 import java.util.Map;
 

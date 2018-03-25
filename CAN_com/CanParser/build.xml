@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project default="deploy" name="Create Runnable Jar for Project CanParser">
+<project default="create_run_jar" name="Create Runnable Jar for Project CanParser">
     <!--this file was created by Eclipse Runnable JAR Export Wizard-->
     <!--ANT 1.7 is required                                        -->
     <!--define folder properties-->
@@ -10,6 +10,15 @@
         <jar destfile="${dir.jarfile}/CanParser.jar" filesetmanifest="mergewithoutmain">
             <manifest>
                 <attribute name="Main-Class" value="edu.njit.solarcar.telemetry.CanTest.CanReaderTest"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${dir.buildfile}/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/lib/libsocket-can-java-master/dist/libsocket-can-java.jar"/>
+        </jar>
+    	
+    	<jar destfile="${dir.jarfile}/UI.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="edu.njit.solarcar.telemetry.CanTest.UI"/>
                 <attribute name="Class-Path" value="."/>
             </manifest>
             <fileset dir="${dir.buildfile}/bin"/>
