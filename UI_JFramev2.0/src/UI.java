@@ -16,29 +16,17 @@ public class UI extends JFrame
     public static JLabel JLSpeed;
     public  JLabel JLMap;
     public static FileRead coordsReader;
-    public static spoof fake;
-    public static CanReader can;
-    public static double internalVoltage;
-    public static double potValue;
-    public static int mps;
-    public static double fullCharge = 44.22; //watt/hrs
-    public static double socOriginal = 100; //percentage
-    public static double Cr = 0.008;
-    public static double Cd = 0.1;
-    public static double A = 0.0959; //m^2
-    public static int mass = 317; //kg
-    public static  double SoC;
-    public static double milesRemaining;
+   public static DisplayValues display;
     public static double mph;
+    public static double SoC;
+    public static double milesRemaining;
     
 
     public UI() throws IOException 
     {
         createUserInterface();
-        fake = new spoof();
-        
-        can = new CanReader(true);
-        can.startPollingLoop(500000);
+        display = new DisplayValues();
+        display.run();
     }
 
     private void createUserInterface()
@@ -76,7 +64,7 @@ public class UI extends JFrame
 
         JLMap = new JLabel();
         JLMap.setBounds(400,0,376,458);
-        JLMap.setIcon(new ImageIcon("D:\\Other\\UI_JFrame\\src\\mapfinal.jpg"));
+        JLMap.setIcon(new ImageIcon("src/mapfinal.jpg"));
         //JLMap.setBorder(BorderFactory.createLineBorder(Color.BLACK,1));
         JLPane.add(JLMap,1);
 
@@ -113,8 +101,6 @@ public class UI extends JFrame
 
 
         Thread daemon = new Thread(() -> {
-            int delay = 300;
-
             File cfil = new File(UI.class.getProtectionDomain().getCodeSource().getLocation().getFile() +"/coordinates.txt");
             System.out.println(cfil);
             try {
@@ -130,7 +116,7 @@ public class UI extends JFrame
                     // PSEUDOCODE
                     //delay = readPotDelay();
 
-                    try { Thread.sleep(300-(fake.mph()*2)); } catch (Exception e) {}
+                    try { Thread.sleep((long) (300-(mph*2))); } catch (Exception e) {}
                 }
 
             } catch (IOException e) {
@@ -142,30 +128,16 @@ public class UI extends JFrame
     }
 
     public static void PsudoValues() {
-        Random rand = new Random();
-        fake.update();
-        //double batTemp = Math.round((0.0 + (50.0 - 0.0) * rand.nextDouble()) * 100.0) / 100.0; //rangeMin + (rangeMax - rangeMin) * random double
-        double MRemain = fake.milesRemaining();
-        double Lat_In = 40.581613, Long_In = -98.347368; //random double number
-        int SPD = fake.mph();
-        int batPercent = fake.Charge();
-        potValue = can.getPotVal();
-        internalVoltage = can.getInternalVoltage();
-        mps = (int) (potValue/3.938);
-        SoC = ((-mps/0.04422*100) + 44.22);
-        mph = mps*2.23694;
-        milesRemaining = mps*(44.22/((mass*9.8*Cr)+(.5*1.2*Cd*A*mps*mps)*mps)) ;
+    		mph = display.getMPH();
+    		SoC = display.getSOC();
+    		milesRemaining = display.getMilesRemaining();
 
-        //int x = (int)Math.ceil((400+(Long_In-(-98.353633))*49694.39277)-5);
-        //int y = (int)Math.ceil((454-((Lat_In-40.575737)*73617.64229))-5);
-
-
-        if(SPD >= 40)
+        if(mph >= 40)
             JLSpeed.setForeground(Color.RED);
           else
             JLSpeed.setForeground(Color.BLACK);
 
-        if (batPercent <= 20)
+        if (SoC <= 20)
             JLBatPercent.setText(SoC +" % "+"Battery Critical!!");
         else
             JLBatPercent.setText(SoC + " % ");
