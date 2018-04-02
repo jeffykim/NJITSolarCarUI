@@ -1,0 +1,24 @@
+poiUrl_0: http://flitsservice.com/flitsservice.ov2
+poiImgUrl_0: http://flitsservice.com/flitsservice.png
+poiName_0: Mobiele flitsers NL
+poiFrequency_0: 300
+poilastUpdate_0: 0
+placeNodex_0: 0
+placeNodey_0: 0
+placeCoordx_0: 0
+placeCoordy_0: 0
+map3D : true
+mapRotate : false
+BTName : 
+BTAddress : 
+activeVoice : null
+language : 0
+Uid : test1
+pwd : test1
+submitNodeTraced : true
+namedTraces : false
+submitGPSTraces : false
+submitInterval : 300
+lastTraceSubmit : 0
+nbrOfMessages : 0
+message_0_0 : Enter City

@@ -1,0 +1,19 @@
+currentColorScheme : 0
+navigationType : 0
+placeNodex_0: 0
+placeNodey_0: 0
+placeCoordx_0: 0
+placeCoordy_0: 0
+map3D : true
+mapRotate : false
+GPSType : -1
+activeVoice : null
+language : 0
+Uid : test1
+pwd : test1
+submitNodeTraced : true
+namedTraces : false
+submitGPSTraces : false
+submitInterval : 0
+lastTraceSubmit : 0
+homeServerRoot : 192.168.1.3

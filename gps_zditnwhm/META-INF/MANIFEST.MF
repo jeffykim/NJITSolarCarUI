@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+MIDlet-Vendor: vendor@we-travel.co.cc
+MIDlet-Version: 00.02.30
+MIDlet-1: We-Travel,/Images/wt32.png,wt.WeTravelMain
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Permissions-Opt: javax.microedition.io.Connector.file.read,java
+ x.microedition.io.Connector.file.write,javax.microedition.io.Connecto
+ r.bluetooth.client,javax.microedition.location.Location,javax.microed
+ ition.io.Connector.comm,javax.microedition.io.Connector.socket,javax.
+ microedition.media.Player,javax.microedition.media.Manage,javax.micro
+ edition.media.control.VideoControl.getSnapshot,javax.microedition.med
+ ia.control.RecordControl,javax.microedition.io.Connector.http
+MIDlet-Install-Notify: http://we-travel.co.cc/wap/midletnotify.php
+MIDlet-Icon: /Images/wt32.png
+MIDlet-Name: WeTravelMidlet Suite
+MicroEdition-Profile: MIDP-2.0
+
