@@ -1,4 +1,4 @@
-import java.io.File;
+import java.io.File; 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -12,7 +12,7 @@ public class FileRead
     public FileRead(File coordsFile) throws IOException {
         coordsReader = new Scanner(coordsFile);
         this.coordsFile = coordsFile;
-        coordsList = new ArrayList<>();
+        coordsList = new ArrayList<XYCoordinate>();
 
         //parse out everything
         String line;

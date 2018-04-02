@@ -1,0 +1,2122 @@
+currentColorScheme : 0
+linecolor_00_0: 8217941
+fillColor_00_0: 8428480
+width_00_0: 40
+area_00_0: false
+dotted_00_0: false
+level_00_0: 8
+typename_00_0: Motorway
+weight00_00_00 : 100
+defaultspeed_00_0: 115
+maxzoom_00_0: 6
+linecolor_00_1: 8217941
+fillColor_00_1: 8428480
+width_00_1: 32
+area_00_1: false
+dotted_00_1: false
+level_00_1: 8
+typename_00_1: Motorway Link
+weight00_00_1 : 120
+defaultspeed_00_1: 60
+maxzoom_00_1: 7
+linecolor_00_2: 5341521
+fillColor_00_2: 6340704
+width_00_2: 38
+area_00_2: false
+dotted_00_2: false
+level_00_2: 7
+typename_00_2: Trunk
+weight00_00_2 : 120
+defaultspeed_00_2: 60
+maxzoom_00_2: 9
+linecolor_00_3: 5341521
+fillColor_00_3: 6340704
+width_00_3: 38
+area_00_3: false
+dotted_00_3: false
+level_00_3: 7
+typename_00_3: Trunk Link
+weight00_00_3 : 120
+defaultspeed_00_3: 60
+maxzoom_00_3: 9
+linecolor_00_4: 6052026
+fillColor_00_4: 14904432
+width_00_4: 38
+area_00_4: false
+dotted_00_4: false
+level_00_4: 6
+typename_00_4: Primary Road
+weight00_00_4 : 100
+weight01_00_4 : 120
+weight02_00_4 : 120
+weight03_00_4 : 120
+defaultspeed_00_4: 75
+maxzoom_00_4: 9
+linecolor_00_5: 0
+fillColor_00_5: 6316128
+width_00_5: 32
+area_00_5: false
+dotted_00_5: false
+level_00_5: 6
+typename_00_5: Primary Road Link 
+weight00_00_5 : 100
+weight01_00_5 : 120
+weight02_00_5 : 120
+weight03_00_5 : 120
+defaultspeed_00_5: 60
+defaultspeed_00_5: 9
+linecolor_00_6: 4750243
+fillColor_00_6: 16563822
+width_00_6: 38
+area_00_6: false
+dotted_00_6: false
+level_00_6: 5
+typename_00_6: Secundary Road
+weight00_00_6 : 110
+weight01_00_6 : 130
+weight02_00_6 : 130
+weight03_00_6 : 130
+defaultspeed_00_6: 70
+maxzoom_00_6: 9
+linecolor_00_7: 10066586
+fillColor_00_7: 16711306
+width_00_7: 34
+area_00_7: false
+dotted_00_7: false
+level_00_7: 4
+typename_00_7: Teriary Road
+weight00_00_7 : 110
+weight01_00_7 : 80
+weight02_00_7 : 80
+weight03_00_7 : 80
+defaultspeed_00_7: 65
+maxzoom_00_7: 10
+linecolor_00_8: 10329501
+fillColor_00_8: 14474478
+width_00_8: 28
+area_00_8: false
+dotted_00_8: false
+level_00_8: 3
+typename_00_8: Unclassified Road
+weight00_00_8 : 140
+weight01_00_8 : 80
+weight02_00_8 : 80
+weight03_00_8 : 80
+defaultspeed_00_8: 30
+maxzoom_00_8: 12
+linecolor_00_10: 0
+fillColor_00_10: 6316128
+width_00_10: 32
+area_00_10: false
+dotted_00_10: false
+level_00_10: 2
+typename_00_10: Unsurfaced Road
+weight02_00_10 : 80
+weight03_00_10 : 80
+defaultspeed_00_10: 30
+maxzoom_00_10: 12
+linecolor_00_11: 0
+fillColor_00_11: 6316128
+width_00_11: 32
+area_00_11: false
+dotted_00_11: false
+level_00_11: 2
+typename_00_11: Track
+weight00_00_11 : 140
+weight01_00_11 : 140
+weight02_00_11 : 80
+weight03_00_11 : 80
+defaultspeed_00_11: 30
+maxzoom_00_11: 12
+linecolor_00_12: 10329501
+fillColor_00_12: 16777215
+width_00_12: 30
+area_00_12: false
+dotted_00_12: false
+level_00_12: 3
+typename_00_12: Residential
+weight00_00_12 : 140
+weight01_00_12 : 100
+weight02_00_12 : 100
+weight03_00_12 : 100
+defaultspeed_00_12: 60
+linecolor_00_13: 0
+fillColor_00_13: 16777215
+width_00_13: 32
+area_00_13: false
+dotted_00_13: false
+level_00_13: 2
+typename_00_13: Living Street
+weight00_00_13 : 140
+weight01_00_13 : 100
+weight02_00_13 : 100
+weight03_00_13 : 100
+defaultspeed_00_13: 25
+linecolor_00_14: 11185067
+fillColor_00_14: 16711422
+width_00_14: 18
+area_00_14: false
+dotted_00_14: false
+level_00_14: 4
+typename_00_14: Service
+weight02_00_14 : 80
+weight03_00_14 : 80
+defaultspeed_00_14: 60
+linecolor_00_15: 0
+fillColor_00_15: 6316128
+width_00_15: 0
+area_00_15: false
+dotted_00_15: false
+level_00_15: 8
+typename_00_15: Bridle Way
+defaultspeed_00_15: 20
+linecolor_00_16: 0
+fillColor_00_16: 6316128
+width_00_16: 0
+area_00_16: false
+dotted_00_16: false
+level_00_16: 8
+typename_00_16: CycleWay
+weight01_00_16 : 70
+weight02_00_16 : 180
+weight03_00_16 : 180
+defaultspeed_00_16: 20
+linecolor_00_17: 16711680
+fillColor_00_17: 0
+width_00_17: 0
+area_00_17: false
+dotted_00_17: true
+level_00_17: 4
+typename_00_17: footway
+weight02_00_17 : 80
+weight03_00_17 : 80
+defaultspeed_00_17: 60
+linecolor_00_18: 11185067
+fillColor_00_18: 15527148
+width_00_18: 16
+area_00_18: false
+dotted_00_18: false
+level_00_18: 2
+typename_00_18: Pedestrian
+weight02_00_18 : 70
+weight03_00_18 : 70
+defaultspeed_00_18: 60
+linecolor_00_19: 16711680
+fillColor_00_19: -1
+width_00_19: 8
+area_00_19: false
+dotted_00_19: true
+level_00_19: 2
+typename_00_19: Steps
+weight02_00_19 : 70
+weight03_00_19 : 70
+defaultspeed_00_19: 60
+linecolor_00_20: 0
+fillColor_00_20: 6316128
+width_00_20: 32
+area_00_20: false
+dotted_00_20: false
+level_00_20: 0
+typename_00_20: Mini Roundabout
+weight00_00_20 : 100
+weight01_00_20 : 100
+weight02_00_20 : 100
+weight03_00_20 : 100
+defaultspeed_00_20: 20
+linecolor_00_21: 0
+fillColor_00_21: 6316128
+width_00_21: 32
+area_00_21: false
+dotted_00_21: false
+level_00_21: 0
+typename_00_21: 
+defaultspeed_00_21: 60
+linecolor_00_22: 0
+fillColor_00_22: 6316128
+width_00_22: 32
+area_00_22: false
+dotted_00_22: false
+level_00_22: 0
+typename_00_22: 
+defaultspeed_00_22: 60
+linecolor_00_23: 0
+fillColor_00_23: 6316128
+width_00_23: 32
+area_00_23: false
+dotted_00_23: false
+level_00_23: 0
+typename_00_23: 
+defaultspeed_00_23: 60
+linecolor_00_24: 0
+fillColor_00_24: 6316128
+width_00_24: 32
+area_00_24: false
+dotted_00_24: false
+level_00_24: 0
+typename_00_24: 
+defaultspeed_00_24: 60
+linecolor_00_25: 0
+fillColor_00_25: 6316128
+width_00_25: 32
+area_00_25: false
+dotted_00_25: false
+level_00_25: 0
+typename_00_25: 
+defaultspeed_00_25: 60
+linecolor_00_26: 0
+fillColor_00_26: 6316128
+width_00_26: 32
+area_00_26: false
+dotted_00_26: false
+level_00_26: 0
+typename_00_26: 
+defaultspeed_00_26: 60
+linecolor_00_27: 0
+fillColor_00_27: 6316128
+width_00_27: 32
+area_00_27: false
+dotted_00_27: false
+level_00_27: 0
+typename_00_27: 
+defaultspeed_00_27: 60
+linecolor_00_28: 0
+fillColor_00_28: 6316128
+width_00_28: 32
+area_00_28: false
+dotted_00_28: false
+level_00_28: 0
+typename_00_28: 
+defaultspeed_00_28: 60
+linecolor_00_29: 0
+fillColor_00_29: 6316128
+width_00_29: 32
+area_00_29: false
+dotted_00_29: false
+level_00_29: 0
+typename_00_29: 
+defaultspeed_00_29: 60
+linecolor_00_30: 0
+fillColor_00_30: 6316128
+width_00_30: 32
+area_00_30: false
+dotted_00_30: false
+level_00_30: 0
+typename_00_30: 
+defaultspeed_00_30: 60
+linecolor_00_31: 0
+fillColor_00_31: 6316128
+width_00_31: 32
+area_00_31: false
+dotted_00_31: false
+level_00_31: 9
+typename_00_31: 
+defaultspeed_00_31: 60
+linecolor_00_32: 0
+fillColor_00_32: 6316128
+width_00_32: 32
+area_00_32: false
+dotted_00_32: false
+level_00_32: 0
+typename_00_32: Motorway Junction
+weight00_00_32 : 100
+defaultspeed_00_32: 90
+maxzoom_00_32: 10
+linecolor_00_33: 0
+fillColor_00_33: 6316128
+width_00_33: 32
+area_00_33: false
+dotted_00_33: false
+level_00_33: 0
+typename_00_33: Services
+weight03_00_33 : 100
+defaultspeed_00_33: 10
+linecolor_00_34: 0
+fillColor_00_34: 6316128
+width_00_34: 32
+area_00_34: false
+dotted_00_34: false
+level_00_34: 0
+typename_00_34: 
+defaultspeed_00_34: 60
+linecolor_00_35: 0
+fillColor_00_35: 6316128
+width_00_35: 32
+area_00_35: false
+dotted_00_35: false
+level_00_35: 0
+typename_00_35: 
+defaultspeed_00_35: 60
+linecolor_00_36: 0
+fillColor_00_36: 6316128
+width_00_36: 32
+area_00_36: false
+dotted_00_36: false
+level_00_36: 0
+typename_00_36: 
+defaultspeed_00_36: 60
+linecolor_00_37: 0
+fillColor_00_37: 6316128
+width_00_37: 32
+area_00_37: false
+dotted_00_37: false
+level_00_37: 0
+typename_00_37: 
+defaultspeed_00_37: 60
+linecolor_00_38: 0
+fillColor_00_38: 6316128
+width_00_38: 32
+area_00_38: false
+dotted_00_38: false
+level_00_38: 0
+typename_00_38: Roundabout
+weight00_00_38 : 100
+weight01_00_38 : 100
+weight02_00_38 : 100
+weight03_00_38 : 100
+defaultspeed_00_38: 60
+linecolor_00_39: 0
+fillColor_00_39: 6316128
+width_00_39: 32
+area_00_39: false
+dotted_00_39: false
+level_00_39: 0
+typename_00_39: 
+defaultspeed_00_39: 60
+linecolor_00_40: 0
+fillColor_00_40: 6316128
+width_00_40: 32
+area_00_40: false
+dotted_00_40: false
+level_00_40: 0
+typename_00_40: 
+defaultspeed_00_40: 60
+linecolor_00_41: 0
+fillColor_00_41: 6316128
+width_00_41: 32
+area_00_41: false
+dotted_00_41: false
+level_00_41: 0
+typename_00_41: 
+defaultspeed_00_41: 60
+linecolor_00_42: 0
+fillColor_00_42: 6316128
+width_00_42: 32
+area_00_42: false
+dotted_00_42: false
+level_00_42: 0
+typename_00_42: 
+defaultspeed_00_42: 60
+linecolor_00_43: 10132122
+fillColor_00_43: 16711422
+width_00_43: 18
+area_00_43: false
+dotted_00_43: false
+level_00_43: 2
+typename_00_43: minor
+defaultspeed_00_43: 60
+linecolor_00_44: 9474192
+fillColor_00_44: 9474192
+width_00_44: 0
+area_00_44: true
+dotted_00_44: false
+level_00_44: 4
+typename_00_44: Service Area
+weight02_00_44 : 80
+weight03_00_44 : 80
+defaultspeed_00_44: 60
+linecolor_00_45: 11559008
+fillColor_00_45: 11559008
+width_00_45: 0
+area_00_45: true
+dotted_00_45: false
+level_00_45: 4
+typename_00_45: footway area
+weight02_00_45 : 80
+weight03_00_45 : 80
+defaultspeed_00_45: 60
+linecolor_00_46: 10592673
+fillColor_00_46: 10592673
+width_00_46: 0
+area_00_46: true
+dotted_00_46: false
+level_00_46: 1
+typename_00_46: Pedestrian square
+weight02_00_46 : 70
+weight03_00_46 : 70
+defaultspeed_00_46: 60
+linecolor_00_47: 0
+fillColor_00_47: 6316128
+width_00_47: 32
+area_00_47: false
+dotted_00_47: false
+level_00_47: 0
+typename_00_47: 
+defaultspeed_00_47: 60
+linecolor_00_48: 0
+fillColor_00_48: 12378826
+width_00_48: 0
+area_00_48: true
+dotted_00_48: false
+level_00_48: 0
+typename_00_48: farm
+linecolor_00_49: 0
+fillColor_00_49: 6316128
+width_00_49: 0
+area_00_49: true
+dotted_00_49: false
+level_00_49: 0
+typename_00_49: quarry
+defaultspeed_00_49: 60
+linecolor_00_50: 0
+fillColor_00_50: 6316128
+width_00_50: 0
+area_00_50: true
+dotted_00_50: false
+level_00_50: 0
+typename_00_50: landfill
+defaultspeed_00_50: 60
+linecolor_00_51: 0
+fillColor_00_51: 11851248
+width_00_51: 0
+area_00_51: true
+dotted_00_51: false
+level_00_51: 0
+typename_00_51: basin 
+defaultspeed_00_51: 60
+linecolor_00_52: 0
+fillColor_00_52: 11851248
+width_00_52: 0
+area_00_52: true
+dotted_00_52: false
+level_00_52: 0
+typename_00_52: reservoir 
+defaultspeed_00_52: 60
+linecolor_00_53: 0
+fillColor_00_53: 12378826
+width_00_53: 0
+area_00_53: true
+dotted_00_53: false
+level_00_53: 0
+typename_00_53: forest 
+defaultspeed_00_53: 60
+maxzoom_00_53: 9
+linecolor_00_54: 0
+fillColor_00_54: 12444619
+width_00_54: 0
+area_00_54: true
+dotted_00_54: false
+level_00_54: 0
+typename_00_54: allotments 
+defaultspeed_00_54: 60
+linecolor_00_55: 0
+fillColor_00_55: 14474460
+width_00_55: 0
+area_00_55: true
+dotted_00_55: false
+level_00_55: 0
+typename_00_55: residential 
+defaultspeed_00_55: 60
+linecolor_00_56: 0
+fillColor_00_56: 16706282
+width_00_56: 0
+area_00_56: true
+dotted_00_56: false
+level_00_56: 0
+typename_00_56: retail 
+defaultspeed_00_56: 60
+linecolor_00_57: 0
+fillColor_00_57: 16514760
+width_00_57: 0
+area_00_57: true
+dotted_00_57: false
+level_00_57: 0
+typename_00_57: commercial 
+defaultspeed_00_57: 60
+linecolor_00_58: 0
+fillColor_00_58: 15456254
+width_00_58: 0
+area_00_58: true
+dotted_00_58: false
+level_00_58: 0
+typename_00_58: industrial 
+defaultspeed_00_58: 60
+linecolor_00_59: 0
+fillColor_00_59: 16701419
+width_00_59: 32
+area_00_59: true
+dotted_00_59: false
+level_00_59: 0
+typename_00_59: brownfield
+defaultspeed_00_59: 60
+linecolor_00_60: 0
+fillColor_00_60: 13362109
+width_00_60: 0
+area_00_60: true
+dotted_00_60: false
+level_00_60: 0
+typename_00_60: greenfield 
+defaultspeed_00_60: 60
+linecolor_00_61: 0
+fillColor_00_61: 6316128
+width_00_61: 0
+area_00_61: true
+dotted_00_61: false
+level_00_61: 0
+typename_00_61: railway 
+defaultspeed_00_61: 60
+linecolor_00_62: 0
+fillColor_00_62: 6316128
+width_00_62: 0
+area_00_62: true
+dotted_00_62: false
+level_00_62: 0
+typename_00_62: construction 
+defaultspeed_00_62: 60
+linecolor_00_63: 0
+fillColor_00_63: 6316128
+width_00_63: 0
+area_00_63: true
+dotted_00_63: false
+level_00_63: 0
+typename_00_63: military 
+defaultspeed_00_63: 60
+linecolor_00_64: 0
+fillColor_00_64: 6316128
+width_00_64: 0
+area_00_64: false
+dotted_00_64: false
+level_00_64: 8
+typename_00_64: 
+defaultspeed_00_64: 60
+linecolor_00_65: 0
+fillColor_00_65: 6316128
+width_00_65: 0
+area_00_65: false
+dotted_00_65: false
+level_00_65: 9
+typename_00_65: 
+defaultspeed_00_65: 60
+linecolor_00_66: 0
+fillColor_00_66: 6316128
+width_00_66: 0
+area_00_66: false
+dotted_00_66: false
+level_00_66: 9
+typename_00_66: 
+defaultspeed_00_66: 60
+linecolor_00_67: 0
+fillColor_00_67: 6316128
+width_00_67: 0
+area_00_67: false
+dotted_00_67: false
+level_00_67: 9
+typename_00_67: 
+defaultspeed_00_67: 60
+linecolor_00_68: 0
+fillColor_00_68: 6316128
+width_00_68: 0
+area_00_68: false
+dotted_00_68: false
+level_00_68: 9
+typename_00_68: 
+defaultspeed_00_68: 60
+linecolor_00_69: 0
+fillColor_00_69: 6316128
+width_00_69: 0
+area_00_69: false
+dotted_00_69: false
+level_00_69: 9
+typename_00_69: 
+defaultspeed_00_69: 60
+linecolor_00_70: 0
+fillColor_00_70: 6316128
+width_00_70: 32
+area_00_70: false
+dotted_00_70: false
+level_00_70: 0
+typename_00_70: 
+defaultspeed_00_70: 60
+linecolor_00_71: 0
+fillColor_00_71: 6316128
+width_00_71: 32
+area_00_71: false
+dotted_00_71: false
+level_00_71: 0
+typename_00_71: 
+defaultspeed_00_71: 60
+linecolor_00_72: 0
+fillColor_00_72: 6316128
+width_00_72: 32
+area_00_72: false
+dotted_00_72: false
+level_00_72: 0
+typename_00_72: 
+defaultspeed_00_72: 60
+linecolor_00_73: 0
+fillColor_00_73: 6316128
+width_00_73: 32
+area_00_73: false
+dotted_00_73: false
+level_00_73: 0
+typename_00_73: 
+defaultspeed_00_73: 60
+linecolor_00_74: 0
+fillColor_00_74: 6316128
+width_00_74: 32
+area_00_74: false
+dotted_00_74: false
+level_00_74: 0
+typename_00_74: 
+defaultspeed_00_74: 60
+linecolor_00_75: 0
+fillColor_00_75: 6316128
+width_00_75: 32
+area_00_75: false
+dotted_00_75: false
+level_00_75: 0
+typename_00_75: 
+defaultspeed_00_75: 60
+linecolor_00_76: 0
+fillColor_00_76: 6316128
+width_00_76: 32
+area_00_76: false
+dotted_00_76: false
+level_00_76: 0
+typename_00_76: 
+defaultspeed_00_76: 60
+linecolor_00_77: 0
+fillColor_00_77: 6316128
+width_00_77: 32
+area_00_77: false
+dotted_00_77: false
+level_00_77: 0
+typename_00_77: 
+defaultspeed_00_77: 60
+linecolor_00_78: 0
+fillColor_00_78: 6316128
+width_00_78: 32
+area_00_78: false
+dotted_00_78: false
+level_00_78: 0
+typename_00_78: 
+defaultspeed_00_78: 60
+linecolor_00_79: 0
+fillColor_00_79: 6316128
+width_00_79: 32
+area_00_79: false
+dotted_00_79: false
+level_00_79: 0
+typename_00_79: 
+defaultspeed_00_79: 60
+linecolor_00_80: 2796287
+fillColor_00_80: 2796287
+width_00_80: 32
+area_00_80: false
+dotted_00_80: false
+level_00_80: 2
+typename_00_80: river
+defaultspeed_00_80: 60
+maxzoom_00_80: 9
+linecolor_00_81: 2796287
+fillColor_00_81: 2796287
+width_00_81: 32
+area_00_81: false
+dotted_00_81: false
+level_00_81: 2
+typename_00_81: Canal
+defaultspeed_00_81: 60
+maxzoom_00_81: 9
+linecolor_00_82: 2796287
+fillColor_00_82: 2796287
+width_00_82: 32
+area_00_82: false
+dotted_00_82: false
+level_00_82: 2
+typename_00_82: 
+defaultspeed_00_82: 60
+maxzoom_00_82: 9
+linecolor_00_83: 2105552
+fillColor_00_83: 2105552
+width_00_83: 32
+area_00_83: false
+dotted_00_83: false
+level_00_83: 2
+typename_00_83: 
+defaultspeed_00_83: 60
+linecolor_00_84: 2105552
+fillColor_00_84: 2105552
+width_00_84: 32
+area_00_84: false
+dotted_00_84: false
+level_00_84: 2
+typename_00_84: 
+defaultspeed_00_84: 60
+linecolor_00_85: 2105552
+fillColor_00_85: 2105552
+width_00_85: 32
+area_00_85: false
+dotted_00_85: false
+level_00_85: 2
+typename_00_85: 
+defaultspeed_00_85: 60
+linecolor_00_86: 2105552
+fillColor_00_86: 2105552
+width_00_86: 32
+area_00_86: false
+dotted_00_86: false
+level_00_86: 2
+typename_00_86: 
+defaultspeed_00_86: 60
+linecolor_00_87: 2105552
+fillColor_00_87: 2105552
+width_00_87: 32
+area_00_87: false
+dotted_00_87: false
+level_00_87: 2
+typename_00_87: 
+defaultspeed_00_87: 60
+linecolor_00_88: 2105552
+fillColor_00_88: 2105552
+width_00_88: 32
+area_00_88: false
+dotted_00_88: false
+level_00_88: 2
+typename_00_88: 
+defaultspeed_00_88: 60
+linecolor_00_89: 2105552
+fillColor_00_89: 2105552
+width_00_89: 32
+area_00_89: false
+dotted_00_89: false
+level_00_89: 2
+typename_00_89: 
+defaultspeed_00_89: 60
+linecolor_00_90: 2105552
+fillColor_00_90: 2105552
+width_00_90: 32
+area_00_90: false
+dotted_00_90: false
+level_00_90: 2
+typename_00_90: 
+defaultspeed_00_90: 60
+linecolor_00_91: 2105552
+fillColor_00_91: 2105552
+width_00_91: 32
+area_00_91: false
+dotted_00_91: false
+level_00_91: 2
+typename_00_91: 
+defaultspeed_00_91: 60
+linecolor_00_92: 2105552
+fillColor_00_92: 2105552
+width_00_92: 32
+area_00_92: false
+dotted_00_92: false
+level_00_92: 2
+typename_00_92: 
+defaultspeed_00_92: 60
+linecolor_00_93: 2105552
+fillColor_00_93: 2105552
+width_00_93: 32
+area_00_93: false
+dotted_00_93: false
+level_00_93: 2
+typename_00_93: 
+defaultspeed_00_93: 60
+linecolor_00_94: 2105552
+fillColor_00_94: 2105552
+width_00_94: 32
+area_00_94: false
+dotted_00_94: false
+level_00_94: 2
+typename_00_94: 
+defaultspeed_00_94: 60
+linecolor_00_95: 2105552
+fillColor_00_95: 2105552
+width_00_95: 32
+area_00_95: true
+dotted_00_95: false
+level_00_95: 2
+typename_00_95: riverbank
+defaultspeed_00_95: 60
+linecolor_00_96: 0
+fillColor_00_96: 6316128
+width_00_96: 32
+area_00_96: false
+dotted_00_96: false
+level_00_96: 0
+typename_00_96: 
+defaultspeed_00_96: 60
+linecolor_00_97: 0
+fillColor_00_97: 6316128
+width_00_97: 32
+area_00_97: false
+dotted_00_97: false
+level_00_97: 0
+typename_00_97: 
+defaultspeed_00_97: 60
+linecolor_00_98: 0
+fillColor_00_98: 6316128
+width_00_98: 32
+area_00_98: false
+dotted_00_98: false
+level_00_98: 0
+typename_00_98: 
+defaultspeed_00_98: 60
+linecolor_00_99: 0
+fillColor_00_99: 6316128
+width_00_99: 32
+area_00_99: false
+dotted_00_99: false
+level_00_99: 0
+typename_00_99: 
+defaultspeed_00_99: 60
+linecolor_00_100: 0
+fillColor_00_100: 6316128
+width_00_100: 32
+area_00_100: false
+dotted_00_100: false
+level_00_100: 0
+typename_00_100: 
+defaultspeed_00_100: 60
+linecolor_00_101: 0
+fillColor_00_101: 6316128
+width_00_101: 32
+area_00_101: false
+dotted_00_101: false
+level_00_101: 0
+typename_00_101: 
+defaultspeed_00_101: 60
+linecolor_00_102: 0
+fillColor_00_102: 0
+width_00_102: 0
+area_00_102: false
+dotted_00_102: false
+level_00_102: 0
+typename_00_102: 
+defaultspeed_00_102: 60
+linecolor_00_103: 5066061
+fillColor_00_103: 5066061
+width_00_103: 0
+area_00_103: false
+dotted_00_103: false
+level_00_103: 8
+typename_00_103: tram
+defaultspeed_00_103: 60
+linecolor_00_104: 0
+fillColor_00_104: 0
+width_00_104: 32
+area_00_104: false
+dotted_00_104: false
+level_00_104: 0
+typename_00_104: 
+defaultspeed_00_104: 60
+linecolor_00_105: 10066329
+fillColor_00_105: 10066329
+width_00_105: 0
+area_00_105: false
+dotted_00_105: true
+level_00_105: 0
+typename_00_105: Subway
+defaultspeed_00_105: 60
+linecolor_00_106: 0
+fillColor_00_106: 6316128
+width_00_106: 32
+area_00_106: false
+dotted_00_106: false
+level_00_106: 0
+typename_00_106: 
+defaultspeed_00_106: 60
+linecolor_00_107: 3158064
+fillColor_00_107: 3158064
+width_00_107: 0
+area_00_107: false
+dotted_00_107: false
+level_00_107: 0
+typename_00_107: 
+defaultspeed_00_107: 60
+linecolor_00_108: 3158064
+fillColor_00_108: 3158064
+width_00_108: 0
+area_00_108: false
+dotted_00_108: false
+level_00_108: 0
+typename_00_108: 
+defaultspeed_00_108: 60
+linecolor_00_109: 3158064
+fillColor_00_109: 3158064
+width_00_109: 0
+area_00_109: false
+dotted_00_109: false
+level_00_109: 0
+typename_00_109: 
+defaultspeed_00_109: 60
+linecolor_00_110: 3158064
+fillColor_00_110: 3158064
+width_00_110: 0
+area_00_110: false
+dotted_00_110: false
+level_00_110: 0
+typename_00_110: 
+defaultspeed_00_110: 60
+linecolor_00_111: 3158064
+fillColor_00_111: 3158064
+width_00_111: 0
+area_00_111: false
+dotted_00_111: false
+level_00_111: 0
+typename_00_111: 
+defaultspeed_00_111: 60
+linecolor_00_112: 0
+fillColor_00_112: 6316128
+width_00_112: 32
+area_00_112: false
+dotted_00_112: false
+level_00_112: 0
+typename_00_112: 
+defaultspeed_00_112: 60
+linecolor_00_113: 0
+fillColor_00_113: 6316128
+width_00_113: 32
+area_00_113: false
+dotted_00_113: false
+level_00_113: 0
+typename_00_113: 
+defaultspeed_00_113: 60
+linecolor_00_114: 0
+fillColor_00_114: 6316128
+width_00_114: 32
+area_00_114: false
+dotted_00_114: false
+level_00_114: 0
+typename_00_114: 
+defaultspeed_00_114: 60
+linecolor_00_115: 0
+fillColor_00_115: 6316128
+width_00_115: 32
+area_00_115: false
+dotted_00_115: false
+level_00_115: 0
+typename_00_115: 
+defaultspeed_00_115: 60
+linecolor_00_116: 0
+fillColor_00_116: 6316128
+width_00_116: 32
+area_00_116: false
+dotted_00_116: false
+level_00_116: 0
+typename_00_116: 
+defaultspeed_00_116: 60
+linecolor_00_117: 0
+fillColor_00_117: 6316128
+width_00_117: 32
+area_00_117: false
+dotted_00_117: false
+level_00_117: 0
+typename_00_117: 
+defaultspeed_00_117: 60
+linecolor_00_118: 0
+fillColor_00_118: 6316128
+width_00_118: 32
+area_00_118: false
+dotted_00_118: false
+level_00_118: 0
+typename_00_118: 
+defaultspeed_00_118: 60
+linecolor_00_119: 0
+fillColor_00_119: 6316128
+width_00_119: 32
+area_00_119: false
+dotted_00_119: false
+level_00_119: 0
+typename_00_119: 
+defaultspeed_00_119: 60
+linecolor_00_120: 0
+fillColor_00_120: 6316128
+width_00_120: 32
+area_00_120: false
+dotted_00_120: false
+level_00_120: 0
+typename_00_120: 
+defaultspeed_00_120: 60
+linecolor_00_121: 0
+fillColor_00_121: 6316128
+width_00_121: 32
+area_00_121: false
+dotted_00_121: false
+level_00_121: 0
+typename_00_121: 
+defaultspeed_00_121: 60
+linecolor_00_122: 0
+fillColor_00_122: 6316128
+width_00_122: 32
+area_00_122: false
+dotted_00_122: false
+level_00_122: 0
+typename_00_122: 
+defaultspeed_00_122: 60
+linecolor_00_123: 0
+fillColor_00_123: 6316128
+width_00_123: 32
+area_00_123: false
+dotted_00_123: false
+level_00_123: 0
+typename_00_123: 
+defaultspeed_00_123: 60
+linecolor_00_124: 0
+fillColor_00_124: 6316128
+width_00_124: 32
+area_00_124: false
+dotted_00_124: false
+level_00_124: 0
+typename_00_124: 
+defaultspeed_00_124: 60
+linecolor_00_125: 0
+fillColor_00_125: 6316128
+width_00_125: 32
+area_00_125: false
+dotted_00_125: false
+level_00_125: 0
+typename_00_125: 
+defaultspeed_00_125: 60
+linecolor_00_126: 0
+fillColor_00_126: 6316128
+width_00_126: 32
+area_00_126: false
+dotted_00_126: false
+level_00_126: 0
+typename_00_126: 
+defaultspeed_00_126: 60
+linecolor_00_127: 0
+fillColor_00_127: 6316128
+width_00_127: 32
+area_00_127: false
+dotted_00_127: false
+level_00_127: 0
+typename_00_127: 
+defaultspeed_00_127: 60
+linecolor_00_128: 0
+fillColor_00_128: 6316128
+width_00_128: 32
+area_00_128: false
+dotted_00_128: false
+level_00_128: 0
+typename_00_128: 
+defaultspeed_00_128: 60
+linecolor_00_129: 0
+fillColor_00_129: 6316128
+width_00_129: 32
+area_00_129: false
+dotted_00_129: false
+level_00_129: 0
+typename_00_129: 
+defaultspeed_00_129: 60
+linecolor_00_130: 0
+fillColor_00_130: 6316128
+width_00_130: 32
+area_00_130: false
+dotted_00_130: false
+level_00_130: 0
+typename_00_130: 
+defaultspeed_00_130: 60
+linecolor_00_131: 0
+fillColor_00_131: 6316128
+width_00_131: 32
+area_00_131: false
+dotted_00_131: false
+level_00_131: 0
+typename_00_131: 
+defaultspeed_00_131: 60
+linecolor_00_132: 0
+fillColor_00_132: 6316128
+width_00_132: 32
+area_00_132: false
+dotted_00_132: false
+level_00_132: 0
+typename_00_132: 
+defaultspeed_00_132: 60
+linecolor_00_133: 0
+fillColor_00_133: 6316128
+width_00_133: 32
+area_00_133: false
+dotted_00_133: false
+level_00_133: 0
+typename_00_133: 
+defaultspeed_00_133: 60
+linecolor_00_134: 0
+fillColor_00_134: 6316128
+width_00_134: 32
+area_00_134: false
+dotted_00_134: false
+level_00_134: 0
+typename_00_134: 
+defaultspeed_00_134: 60
+linecolor_00_135: 0
+fillColor_00_135: 6316128
+width_00_135: 32
+area_00_135: false
+dotted_00_135: false
+level_00_135: 0
+typename_00_135: 
+defaultspeed_00_135: 60
+linecolor_00_136: 0
+fillColor_00_136: 6316128
+width_00_136: 32
+area_00_136: false
+dotted_00_136: false
+level_00_136: 0
+typename_00_136: 
+defaultspeed_00_136: 60
+linecolor_00_137: 0
+fillColor_00_137: 6316128
+width_00_137: 32
+area_00_137: false
+dotted_00_137: false
+level_00_137: 0
+typename_00_137: 
+defaultspeed_00_137: 60
+linecolor_00_138: 0
+fillColor_00_138: 6316128
+width_00_138: 32
+area_00_138: false
+dotted_00_138: false
+level_00_138: 0
+typename_00_138: 
+defaultspeed_00_138: 60
+linecolor_00_139: 0
+fillColor_00_139: 6316128
+width_00_139: 32
+area_00_139: false
+dotted_00_139: false
+level_00_139: 0
+typename_00_139: 
+defaultspeed_00_139: 60
+linecolor_00_140: 0
+fillColor_00_140: 6316128
+width_00_140: 32
+area_00_140: false
+dotted_00_140: false
+level_00_140: 0
+typename_00_140: 
+defaultspeed_00_140: 60
+linecolor_00_141: 0
+fillColor_00_141: 6316128
+width_00_141: 32
+area_00_141: false
+dotted_00_141: false
+level_00_141: 0
+typename_00_141: 
+defaultspeed_00_141: 60
+linecolor_00_142: 0
+fillColor_00_142: 6316128
+width_00_142: 32
+area_00_142: false
+dotted_00_142: false
+level_00_142: 0
+typename_00_142: 
+defaultspeed_00_142: 60
+linecolor_00_143: 0
+fillColor_00_143: 6316128
+width_00_143: 32
+area_00_143: false
+dotted_00_143: false
+level_00_143: 0
+typename_00_143: 
+defaultspeed_00_143: 60
+linecolor_00_144: 0
+fillColor_00_144: 6316128
+width_00_144: 32
+area_00_144: false
+dotted_00_144: false
+level_00_144: 0
+typename_00_144: 
+defaultspeed_00_144: 60
+linecolor_00_145: 0
+fillColor_00_145: 6316128
+width_00_145: 32
+area_00_145: false
+dotted_00_145: false
+level_00_145: 0
+typename_00_145: 
+defaultspeed_00_145: 60
+linecolor_00_146: 0
+fillColor_00_146: 6316128
+width_00_146: 32
+area_00_146: false
+dotted_00_146: false
+level_00_146: 0
+typename_00_146: 
+defaultspeed_00_146: 60
+linecolor_00_147: 0
+fillColor_00_147: 6316128
+width_00_147: 32
+area_00_147: false
+dotted_00_147: false
+level_00_147: 0
+typename_00_147: 
+defaultspeed_00_147: 60
+linecolor_00_148: 0
+fillColor_00_148: 6316128
+width_00_148: 32
+area_00_148: false
+dotted_00_148: false
+level_00_148: 0
+typename_00_148: 
+defaultspeed_00_148: 60
+linecolor_00_149: 0
+fillColor_00_149: 6316128
+width_00_149: 32
+area_00_149: false
+dotted_00_149: false
+level_00_149: 0
+typename_00_149: 
+defaultspeed_00_149: 60
+linecolor_00_150: 0
+fillColor_00_150: 6316128
+width_00_150: 32
+area_00_150: false
+dotted_00_150: false
+level_00_150: 0
+typename_00_150: 
+defaultspeed_00_150: 60
+linecolor_00_151: 0
+fillColor_00_151: 6316128
+width_00_151: 32
+area_00_151: false
+dotted_00_151: false
+level_00_151: 0
+typename_00_151: 
+defaultspeed_00_151: 60
+linecolor_00_152: 0
+fillColor_00_152: 6316128
+width_00_152: 32
+area_00_152: false
+dotted_00_152: false
+level_00_152: 0
+typename_00_152: 
+defaultspeed_00_152: 60
+linecolor_00_153: 0
+fillColor_00_153: 6316128
+width_00_153: 32
+area_00_153: false
+dotted_00_153: false
+level_00_153: 0
+typename_00_153: 
+defaultspeed_00_153: 60
+linecolor_00_154: 0
+fillColor_00_154: 6316128
+width_00_154: 32
+area_00_154: false
+dotted_00_154: false
+level_00_154: 0
+typename_00_154: 
+defaultspeed_00_154: 60
+linecolor_00_155: 0
+fillColor_00_155: 6316128
+width_00_155: 32
+area_00_155: false
+dotted_00_155: false
+level_00_155: 0
+typename_00_155: 
+defaultspeed_00_155: 60
+linecolor_00_156: 0
+fillColor_00_156: 6316128
+width_00_156: 32
+area_00_156: false
+dotted_00_156: false
+level_00_156: 0
+typename_00_156: 
+defaultspeed_00_156: 60
+linecolor_00_157: 0
+fillColor_00_157: 6316128
+width_00_157: 32
+area_00_157: false
+dotted_00_157: false
+level_00_157: 0
+typename_00_157: 
+defaultspeed_00_157: 60
+linecolor_00_158: 0
+fillColor_00_158: 6316128
+width_00_158: 32
+area_00_158: false
+dotted_00_158: false
+level_00_158: 0
+typename_00_158: 
+defaultspeed_00_158: 60
+linecolor_00_159: 0
+fillColor_00_159: 6316128
+width_00_159: 32
+area_00_159: false
+dotted_00_159: false
+level_00_159: 0
+typename_00_159: 
+defaultspeed_00_159: 60
+linecolor_00_160: 0
+fillColor_00_160: 6316128
+width_00_160: 32
+area_00_160: false
+dotted_00_160: false
+level_00_160: 0
+typename_00_160: 
+defaultspeed_00_160: 60
+linecolor_00_161: 0
+fillColor_00_161: 6316128
+width_00_161: 32
+area_00_161: false
+dotted_00_161: false
+level_00_161: 0
+typename_00_161: 
+defaultspeed_00_161: 60
+linecolor_00_162: 0
+fillColor_00_162: 6316128
+width_00_162: 32
+area_00_162: false
+dotted_00_162: false
+level_00_162: 0
+typename_00_162: 
+defaultspeed_00_162: 60
+linecolor_00_163: 0
+fillColor_00_163: 6316128
+width_00_163: 32
+area_00_163: false
+dotted_00_163: false
+level_00_163: 0
+typename_00_163: 
+defaultspeed_00_163: 60
+linecolor_00_164: 0
+fillColor_00_164: 6316128
+width_00_164: 32
+area_00_164: false
+dotted_00_164: false
+level_00_164: 0
+typename_00_164: 
+defaultspeed_00_164: 60
+linecolor_00_165: 0
+fillColor_00_165: 6316128
+width_00_165: 32
+area_00_165: false
+dotted_00_165: false
+level_00_165: 0
+typename_00_165: 
+defaultspeed_00_165: 60
+linecolor_00_166: 0
+fillColor_00_166: 6316128
+width_00_166: 32
+area_00_166: false
+dotted_00_166: false
+level_00_166: 0
+typename_00_166: 
+defaultspeed_00_166: 60
+linecolor_00_167: 0
+fillColor_00_167: 6316128
+width_00_167: 32
+area_00_167: false
+dotted_00_167: false
+level_00_167: 0
+typename_00_167: 
+defaultspeed_00_167: 60
+linecolor_00_168: 0
+fillColor_00_168: 6316128
+width_00_168: 32
+area_00_168: false
+dotted_00_168: false
+level_00_168: 0
+typename_00_168: 
+defaultspeed_00_168: 60
+linecolor_00_169: 0
+fillColor_00_169: 6316128
+width_00_169: 32
+area_00_169: false
+dotted_00_169: false
+level_00_169: 0
+typename_00_169: 
+defaultspeed_00_169: 60
+linecolor_00_170: 0
+fillColor_00_170: 6316128
+width_00_170: 32
+area_00_170: false
+dotted_00_170: false
+level_00_170: 0
+typename_00_170: 
+defaultspeed_00_170: 60
+linecolor_00_171: 0
+fillColor_00_171: 6316128
+width_00_171: 32
+area_00_171: false
+dotted_00_171: false
+level_00_171: 0
+typename_00_171: 
+defaultspeed_00_171: 60
+linecolor_00_172: 0
+fillColor_00_172: 6316128
+width_00_172: 32
+area_00_172: false
+dotted_00_172: false
+level_00_172: 0
+typename_00_172: 
+defaultspeed_00_172: 60
+linecolor_00_173: 0
+fillColor_00_173: 6316128
+width_00_173: 32
+area_00_173: false
+dotted_00_173: false
+level_00_173: 0
+typename_00_173: 
+defaultspeed_00_173: 60
+linecolor_00_174: 0
+fillColor_00_174: 6316128
+width_00_174: 32
+area_00_174: false
+dotted_00_174: false
+level_00_174: 0
+typename_00_174: 
+defaultspeed_00_174: 60
+linecolor_00_175: 0
+fillColor_00_175: 6316128
+width_00_175: 32
+area_00_175: false
+dotted_00_175: false
+level_00_175: 0
+typename_00_175: 
+defaultspeed_00_175: 60
+linecolor_00_176: 0
+fillColor_00_176: 6316128
+width_00_176: 32
+area_00_176: false
+dotted_00_176: false
+level_00_176: 0
+typename_00_176: 
+defaultspeed_00_176: 60
+linecolor_00_177: 0
+fillColor_00_177: 6316128
+width_00_177: 32
+area_00_177: false
+dotted_00_177: false
+level_00_177: 0
+typename_00_177: 
+defaultspeed_00_177: 60
+linecolor_00_178: 0
+fillColor_00_178: 6316128
+width_00_178: 32
+area_00_178: false
+dotted_00_178: false
+level_00_178: 0
+typename_00_178: 
+defaultspeed_00_178: 60
+linecolor_00_179: 0
+fillColor_00_179: 6316128
+width_00_179: 32
+area_00_179: false
+dotted_00_179: false
+level_00_179: 0
+typename_00_179: 
+defaultspeed_00_179: 60
+linecolor_00_180: 0
+fillColor_00_180: 6316128
+width_00_180: 32
+area_00_180: false
+dotted_00_180: false
+level_00_180: 0
+typename_00_180: 
+defaultspeed_00_180: 60
+linecolor_00_181: 0
+fillColor_00_181: 6316128
+width_00_181: 32
+area_00_181: false
+dotted_00_181: false
+level_00_181: 0
+typename_00_181: 
+defaultspeed_00_181: 60
+linecolor_00_182: 0
+fillColor_00_182: 6316128
+width_00_182: 32
+area_00_182: false
+dotted_00_182: false
+level_00_182: 0
+typename_00_182: 
+defaultspeed_00_182: 60
+linecolor_00_183: 0
+fillColor_00_183: 6316128
+width_00_183: 32
+area_00_183: false
+dotted_00_183: false
+level_00_183: 0
+typename_00_183: 
+defaultspeed_00_183: 60
+linecolor_00_184: 0
+fillColor_00_184: 6316128
+width_00_184: 32
+area_00_184: false
+dotted_00_184: false
+level_00_184: 0
+typename_00_184: 
+defaultspeed_00_184: 60
+linecolor_00_185: 0
+fillColor_00_185: 6316128
+width_00_185: 32
+area_00_185: false
+dotted_00_185: false
+level_00_185: 0
+typename_00_185: 
+defaultspeed_00_185: 60
+linecolor_00_186: 0
+fillColor_00_186: 6316128
+width_00_186: 32
+area_00_186: false
+dotted_00_186: false
+level_00_186: 0
+typename_00_186: 
+defaultspeed_00_186: 60
+linecolor_00_187: 0
+fillColor_00_187: 6316128
+width_00_187: 32
+area_00_187: false
+dotted_00_187: false
+level_00_187: 0
+typename_00_187: 
+defaultspeed_00_187: 60
+linecolor_00_188: 0
+fillColor_00_188: 6316128
+width_00_188: 32
+area_00_188: false
+dotted_00_188: false
+level_00_188: 0
+typename_00_188: 
+defaultspeed_00_188: 60
+linecolor_00_189: 0
+fillColor_00_189: 6316128
+width_00_189: 32
+area_00_189: false
+dotted_00_189: false
+level_00_189: 0
+typename_00_189: 
+defaultspeed_00_189: 60
+linecolor_00_190: 0
+fillColor_00_190: 6316128
+width_00_190: 32
+area_00_190: false
+dotted_00_190: false
+level_00_190: 0
+typename_00_190: 
+defaultspeed_00_190: 60
+linecolor_00_191: 0
+fillColor_00_191: 6316128
+width_00_191: 32
+area_00_191: false
+dotted_00_191: false
+level_00_191: 0
+typename_00_191: 
+defaultspeed_00_191: 60
+linecolor_00_192: 0
+fillColor_00_192: 8503154
+width_00_192: 32
+area_00_192: true
+dotted_00_192: false
+level_00_192: 0
+typename_00_192: scrub
+defaultspeed_00_192: 60
+linecolor_00_193: 0
+fillColor_00_193: 8503154
+width_00_193: 32
+area_00_193: true
+dotted_00_193: false
+level_00_193: 0
+typename_00_193: fell
+defaultspeed_00_193: 60
+linecolor_00_194: 0
+fillColor_00_194: 8503154
+width_00_194: 32
+area_00_194: true
+dotted_00_194: false
+level_00_194: 0
+typename_00_194: heath
+defaultspeed_00_194: 60
+linecolor_00_195: 0
+fillColor_00_195: 8503154
+width_00_195: 32
+area_00_195: true
+dotted_00_195: false
+level_00_195: 0
+typename_00_195: wood
+defaultspeed_00_195: 60
+linecolor_00_196: 2146336
+fillColor_00_196: 15980213
+width_00_196: 0
+area_00_196: true
+dotted_00_196: false
+level_00_196: 0
+typename_00_196: marsh
+defaultspeed_00_196: 60
+linecolor_00_197: 2796287
+fillColor_00_197: 2796287
+width_00_197: 0
+area_00_197: true
+dotted_00_197: false
+level_00_197: 3
+typename_00_197: water
+defaultspeed_00_197: 60
+linecolor_00_198: 2807039
+fillColor_00_198: 2807039
+width_00_198: 0
+area_00_198: true
+dotted_00_198: false
+level_00_198: 0
+typename_00_198: coastline
+defaultspeed_00_198: 60
+linecolor_00_199: 2105552
+fillColor_00_199: 5623022
+width_00_199: 0
+area_00_199: true
+dotted_00_199: false
+level_00_199: 0
+typename_00_199: mud
+defaultspeed_00_199: 60
+maxzoom_00_199: 5
+linecolor_00_200: 0
+fillColor_00_200: 6316128
+width_00_200: 32
+area_00_200: false
+dotted_00_200: false
+level_00_200: 0
+typename_00_200: 
+defaultspeed_00_200: 60
+linecolor_00_201: 0
+fillColor_00_201: 5623022
+width_00_201: 32
+area_00_201: true
+dotted_00_201: false
+level_00_201: 0
+typename_00_201: beach
+defaultspeed_00_201: 60
+linecolor_00_202: 0
+fillColor_00_202: 6316128
+width_00_202: 32
+area_00_202: false
+dotted_00_202: false
+level_00_202: 0
+typename_00_202: bay
+defaultspeed_00_202: 60
+linecolor_00_203: 0
+fillColor_00_203: 6316128
+width_00_203: 32
+area_00_203: false
+dotted_00_203: false
+level_00_203: 0
+typename_00_203: land
+defaultspeed_00_203: 60
+linecolor_00_204: 0
+fillColor_00_204: 6316128
+width_00_204: 32
+area_00_204: false
+dotted_00_204: false
+level_00_204: 0
+typename_00_204: cave
+defaultspeed_00_204: 60
+linecolor_00_205: 0
+fillColor_00_205: 6316128
+width_00_205: 32
+area_00_205: false
+dotted_00_205: false
+level_00_205: 0
+typename_00_205: 
+defaultspeed_00_205: 60
+linecolor_00_206: 0
+fillColor_00_206: 6316128
+width_00_206: 32
+area_00_206: false
+dotted_00_206: false
+level_00_206: 0
+typename_00_206: 
+defaultspeed_00_206: 60
+linecolor_00_207: 0
+fillColor_00_207: 6316128
+width_00_207: 32
+area_00_207: false
+dotted_00_207: false
+level_00_207: 0
+typename_00_207: 
+defaultspeed_00_207: 60
+linecolor_00_208: 0
+fillColor_00_208: 6316128
+width_00_208: 32
+area_00_208: false
+dotted_00_208: false
+level_00_208: 0
+typename_00_208: 
+defaultspeed_00_208: 60
+linecolor_00_209: 0
+fillColor_00_209: 6316128
+width_00_209: 32
+area_00_209: false
+dotted_00_209: false
+level_00_209: 0
+typename_00_209: 
+defaultspeed_00_209: 60
+linecolor_00_210: 11455145
+fillColor_00_210: 11455145
+width_00_210: 0
+area_00_210: true
+dotted_00_210: false
+level_00_210: 0
+typename_00_210: Landuse Cemetery
+defaultspeed_00_210: 60
+linecolor_00_211: 4824519
+fillColor_00_211: 4824519
+width_00_211: 0
+area_00_211: false
+dotted_00_211: true
+level_00_211: 3
+typename_00_211: highway path
+defaultspeed_00_211: 60
+linecolor_00_212: 13684917
+fillColor_00_212: 13684917
+width_00_212: 0
+area_00_212: true
+dotted_00_212: false
+level_00_212: 0
+typename_00_212: Landuse Water
+defaultspeed_00_212: 60
+linecolor_00_213: 2807039
+fillColor_00_213: 2807039
+width_00_213: 0
+area_00_213: true
+dotted_00_213: false
+level_00_213: 0
+typename_00_213: Village Green
+defaultspeed_00_213: 60
+linecolor_00_214: 0
+fillColor_00_214: 8334079
+width_00_214: 32
+area_00_214: false
+dotted_00_214: false
+level_00_214: 0
+typename_00_214: 
+defaultspeed_00_214: 60
+linecolor_00_215: 13417403
+fillColor_00_215: 13417403
+width_00_215: 0
+area_00_215: true
+dotted_00_215: false
+level_00_215: 1
+typename_00_215: aeroway area
+defaultspeed_00_215: 60
+linecolor_00_216: 13417403
+fillColor_00_216: 11185067
+width_00_216: 32
+area_00_216: false
+dotted_00_216: false
+level_00_216: 1
+typename_00_216: aeroway line
+defaultspeed_00_216: 60
+linecolor_00_217: 11992246
+fillColor_00_217: 11992246
+width_00_217: 0
+area_00_217: true
+dotted_00_217: false
+level_00_217: 1
+typename_00_217: landuse recreation ground 
+defaultspeed_00_217: 60
+linecolor_00_218: 0
+fillColor_00_218: 6316128
+width_00_218: 32
+area_00_218: false
+dotted_00_218: false
+level_00_218: 0
+typename_00_218: 
+defaultspeed_00_218: 60
+linecolor_00_219: 0
+fillColor_00_219: 6316128
+width_00_219: 32
+area_00_219: false
+dotted_00_219: false
+level_00_219: 0
+typename_00_219: 
+defaultspeed_00_219: 60
+linecolor_00_220: 0
+fillColor_00_220: 6316128
+width_00_220: 32
+area_00_220: false
+dotted_00_220: false
+level_00_220: 0
+typename_00_220: 
+defaultspeed_00_220: 60
+linecolor_00_221: 0
+fillColor_00_221: 6316128
+width_00_221: 12
+area_00_221: false
+dotted_00_221: false
+level_00_221: 0
+typename_00_221: Highway Road
+defaultspeed_00_221: 60
+linecolor_00_222: 9580586
+fillColor_00_222: 9580586
+width_00_222: 0
+area_00_222: false
+dotted_00_222: true
+level_00_222: 2
+typename_00_222: Route Ferry
+defaultspeed_00_222: 60
+linecolor_00_223: 13684917
+fillColor_00_223: 13684917
+width_00_223: 0
+area_00_223: true
+dotted_00_223: false
+level_00_223: 0
+typename_00_223: Natural River
+defaultspeed_00_223: 60
+linecolor_00_224: 0
+fillColor_00_224: 6316128
+width_00_224: 32
+area_00_224: false
+dotted_00_224: false
+level_00_224: 0
+typename_00_224: 
+defaultspeed_00_224: 60
+linecolor_00_225: 0
+fillColor_00_225: 6316128
+width_00_225: 32
+area_00_225: false
+dotted_00_225: false
+level_00_225: 0
+typename_00_225: 
+defaultspeed_00_225: 60
+linecolor_00_226: 6316128
+fillColor_00_226: 6316128
+width_00_226: 0
+area_00_226: area
+dotted_00_226: false
+level_00_226: 4
+typename_00_226: Landuse Square
+defaultspeed_00_226: 60
+linecolor_00_227: 8388479
+fillColor_00_227: 8388479
+width_00_227: 0
+area_00_227: true
+dotted_00_227: false
+level_00_227: 1
+typename_00_227: Leisure Green
+defaultspeed_00_227: 60
+linecolor_00_228: 0
+fillColor_00_228: 16777008
+width_00_228: 32
+area_00_228: true
+dotted_00_228: false
+level_00_228: 1
+typename_00_228: Amenity
+defaultspeed_00_228: 60
+linecolor_00_229: 8334079
+fillColor_00_229: 8334079
+width_00_229: 32
+area_00_229: true
+dotted_00_229: false
+level_00_229: 2
+typename_00_229: Building
+defaultspeed_00_229: 60
+linecolor_00_230: 11173887
+fillColor_00_230: 11173887
+width_00_230: 32
+area_00_230: false
+dotted_00_230: false
+level_00_230: 0
+typename_00_230: 
+defaultspeed_00_230: 60
+linecolor_00_231: 0
+fillColor_00_231: 6316128
+width_00_231: 32
+area_00_231: false
+dotted_00_231: false
+level_00_231: 0
+typename_00_231: 
+defaultspeed_00_231: 60
+linecolor_00_232: 0
+fillColor_00_232: 6316128
+width_00_232: 32
+area_00_232: false
+dotted_00_232: false
+level_00_232: 0
+typename_00_232: 
+defaultspeed_00_232: 60
+linecolor_00_233: 0
+fillColor_00_233: 6316128
+width_00_233: 32
+area_00_233: false
+dotted_00_233: false
+level_00_233: 0
+typename_00_233: 
+defaultspeed_00_233: 60
+linecolor_00_234: 0
+fillColor_00_234: 6316128
+width_00_234: 32
+area_00_234: false
+dotted_00_234: false
+level_00_234: 0
+typename_00_234: 
+defaultspeed_00_234: 60
+linecolor_00_235: 0
+fillColor_00_235: 6316128
+width_00_235: 32
+area_00_235: false
+dotted_00_235: false
+level_00_235: 0
+typename_00_235: 
+defaultspeed_00_235: 60
+linecolor_00_236: 0
+fillColor_00_236: 6316128
+width_00_236: 32
+area_00_236: false
+dotted_00_236: false
+level_00_236: 0
+typename_00_236: 
+defaultspeed_00_236: 60
+linecolor_00_237: 0
+fillColor_00_237: 6316128
+width_00_237: 32
+area_00_237: false
+dotted_00_237: false
+level_00_237: 0
+typename_00_237: 
+defaultspeed_00_237: 60
+linecolor_00_238: 0
+fillColor_00_238: 6316128
+width_00_238: 32
+area_00_238: false
+dotted_00_238: false
+level_00_238: 0
+typename_00_238: 
+defaultspeed_00_238: 60
+linecolor_00_239: 0
+fillColor_00_239: 6316128
+width_00_239: 32
+area_00_239: false
+dotted_00_239: false
+level_00_239: 0
+typename_00_239: 
+defaultspeed_00_239: 60
+linecolor_00_240: 0
+fillColor_00_240: 6316128
+width_00_240: 32
+area_00_240: false
+dotted_00_240: false
+level_00_240: 0
+typename_00_240: 
+defaultspeed_00_240: 60
+linecolor_00_241: 0
+fillColor_00_241: 6316128
+width_00_241: 32
+area_00_241: false
+dotted_00_241: false
+level_00_241: 0
+typename_00_241: 
+defaultspeed_00_241: 60
+linecolor_00_242: 0
+fillColor_00_242: 6316128
+width_00_242: 32
+area_00_242: false
+dotted_00_242: false
+level_00_242: 0
+typename_00_242: 
+defaultspeed_00_242: 60
+linecolor_00_243: 0
+fillColor_00_243: 6316128
+width_00_243: 32
+area_00_243: false
+dotted_00_243: false
+level_00_243: 0
+typename_00_243: 
+defaultspeed_00_243: 60
+linecolor_00_244: 0
+fillColor_00_244: 6316128
+width_00_244: 32
+area_00_244: false
+dotted_00_244: false
+level_00_244: 0
+typename_00_244: 
+defaultspeed_00_244: 60
+linecolor_00_245: 0
+fillColor_00_245: 6316128
+width_00_245: 32
+area_00_245: false
+dotted_00_245: false
+level_00_245: 0
+typename_00_245: 
+defaultspeed_00_245: 60
+linecolor_00_246: 0
+fillColor_00_246: 6316128
+width_00_246: 32
+area_00_246: false
+dotted_00_246: false
+level_00_246: 0
+typename_00_246: 
+defaultspeed_00_246: 60
+linecolor_00_247: 0
+fillColor_00_247: 6316128
+width_00_247: 32
+area_00_247: false
+dotted_00_247: false
+level_00_247: 0
+typename_00_247: 
+defaultspeed_00_247: 60
+linecolor_00_248: 0
+fillColor_00_248: 6316128
+width_00_248: 32
+area_00_248: false
+dotted_00_248: false
+level_00_248: 0
+typename_00_248: 
+defaultspeed_00_248: 60
+linecolor_00_249: 0
+fillColor_00_249: 6316128
+width_00_249: 32
+area_00_249: false
+dotted_00_249: false
+level_00_249: 0
+typename_00_249: 
+defaultspeed_00_249: 60
+linecolor_00_250: 0
+fillColor_00_250: 6316128
+width_00_250: 32
+area_00_250: false
+dotted_00_250: false
+level_00_250: 0
+typename_00_250: 
+defaultspeed_00_250: 60
+linecolor_00_251: 0
+fillColor_00_251: 6316128
+width_00_251: 32
+area_00_251: false
+dotted_00_251: false
+level_00_251: 0
+typename_00_251: 
+defaultspeed_00_251: 60
+linecolor_00_252: 0
+fillColor_00_252: 6316128
+width_00_252: 32
+area_00_252: false
+dotted_00_252: false
+level_00_252: 0
+typename_00_252: 
+defaultspeed_00_252: 60
+linecolor_00_253: 0
+fillColor_00_253: 6316128
+width_00_253: 32
+area_00_253: false
+dotted_00_253: false
+level_00_253: 0
+typename_00_253: 
+defaultspeed_00_253: 60
+linecolor_00_254: 0
+fillColor_00_254: 6316128
+width_00_254: 32
+area_00_254: false
+dotted_00_254: false
+level_00_254: 0
+typename_00_254: 
+defaultspeed_00_254: 60
+linecolor_00_255: 0
+fillColor_00_255: 6316128
+width_00_255: 32
+area_00_255: false
+dotted_00_255: false
+level_00_255: 0
+typename_00_255: 
+defaultspeed_00_255: 60
