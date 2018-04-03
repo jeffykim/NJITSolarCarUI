@@ -5,9 +5,9 @@ import java.io.InputStreamReader;
 public class GPS {
     private Process p;
     private BufferedReader in;
-    public GPS() {
+    public GPS(String fullPathToPythonScript) {
         try {
-            p = Runtime.getRuntime().exec("python /media/george/TETA/GPS/src/zib.py");
+            p = Runtime.getRuntime().exec("python "+fullPathToPythonScript);
             in = new BufferedReader(new InputStreamReader(p.getInputStream()));
         }
         catch (IOException e){e.printStackTrace();}
