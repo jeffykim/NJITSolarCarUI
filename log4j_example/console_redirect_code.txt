@@ -1,0 +1,19 @@
+//Run this at startup
+
+		try {
+			// Load all the confifg files
+			log4jConfigLocation = Util.loadFile("/config/log4j2.xml"); // make this whatever the path to the config file is
+			
+			// configure Log4j
+			System.out.println("log4j2 config file: " +log4jConfigLocation.toString());
+			LoggerContext.getContext(false).setConfigLocation(log4jConfigLocation.toURI());
+			
+			// redirect syso / syserr to log4j
+			System.setErr(IoBuilder.forLogger(LogManager.getLogger("System_err")).setLevel(Level.ERROR).buildPrintStream());
+			System.setOut(IoBuilder.forLogger(LogManager.getLogger("System_out")).setLevel(Level.INFO).buildPrintStream());
+			
+		} catch (FileNotFoundException | URISyntaxException e) {
+			System.err.println("Failed to Load core configuration data!");
+			e.printStackTrace();
+			System.exit(1);
+		}
