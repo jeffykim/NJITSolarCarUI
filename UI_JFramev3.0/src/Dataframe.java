@@ -3,6 +3,7 @@ public class Dataframe {
     public double internalVoltage;
     public double accel;
     public double SoC;
+    public double drainRate;
     public double milesRemaining;
     public double mph;
     public double lat;
