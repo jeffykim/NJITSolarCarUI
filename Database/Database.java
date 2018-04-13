@@ -61,16 +61,20 @@ public class Database {
                 + ") WITHOUT ROWID;";
 		String dataByTime = "CREATE TABLE IF NOT EXISTS dataByTime (\n"
                 + " Time integer PRIMARY KEY,\n" //first value is col name second is data type third is col constraint
-                + " Speed real,\n"
-                + " State_of_Charge real,\n"
-                + " Power_Draw real,\n"
-                + " Acclrm_X real,\n"
-                + " Acclrm_Y real,\n"
-                + " Acclrm_Z real,\n"
-                + " Miles_Travled real,\n"
-                + " Miles_Remaining real,\n"
-                + " Cabin_Temperature real,\n"
-                + "	Driver_Heart_Rate real\n"
+                + " internalVoltage real,\n"
+                + " accel real,\n"
+                + " SoC real,\n"
+                + " drainRate real,\n"
+                + " milesRemaining real,\n"
+                + " mph real,\n"
+                + " lat real,\n"
+                + " lon real,\n"
+                + " linearAccelX real,\n"
+				+ " linearAccelY real,\n"
+				+ " linearAccelZ real,\n"
+				+ " gravitationalAccelX real,\n"
+				+ " gravitationalAccelY real,\n"
+				+ " gravitationalAccelZ real\n"
                 + ") WITHOUT ROWID;";
 		try{
 			statement.execute(dataByLap);
@@ -88,24 +92,31 @@ public class Database {
 		}
 		
 	}
-	public void addDataByTime(double Speed, double State_of_Charge, double Power_Draw, double Acclrm_X, double Acclrm_Y, double Acclrm_Z, double Miles_Travled, double Miles_Remaining, double Cabin_Temperature, double Driver_Heart_Rate) {
-		String insertStatement = "INSERT INTO dataByTime(Time,Speed,State_of_Charge,Power_Draw,Acclrm_X,Acclrm_Y,Acclrm_Z,Miles_Travled,Miles_Remaining,Cabin_Temperature,Driver_Heart_Rate)"
-				+ "VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+	public void addDataByTime(long time, double internalVoltage, double accel, double SoC, double drainRate,
+							  double milesRemaining, double mph, double lat, double lon, double linearAccelX,
+							  double linearAccelY, double linearAccelZ, double gravitationalAccelX,
+							  double gravitationalAccelY, double gravitationalAccelZ) {
+		String insertStatement = "INSERT INTO dataByTime(Time,internalVoltage,accel,SoC,drainRate,milesRemaining,mph,lat,lon,linearAccelX,linearAccelY,linearAccelZ,gravitationalAccelX,gravitationalAccelY,gravitationalAccelZ)"
+				+ "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		
 		try {
 			long unixTime = System.currentTimeMillis();
 			PreparedStatement insertDataStatement = connection.prepareStatement(insertStatement);
-			insertDataStatement.setLong(1,unixTime);
-			insertDataStatement.setDouble(2,Speed);
-			insertDataStatement.setDouble(3,State_of_Charge);
-			insertDataStatement.setDouble(4,Power_Draw);
-			insertDataStatement.setDouble(5,Acclrm_X);
-			insertDataStatement.setDouble(6,Acclrm_Y);
-			insertDataStatement.setDouble(7,Acclrm_Z);
-			insertDataStatement.setDouble(8,Miles_Travled);
-			insertDataStatement.setDouble(9,Miles_Remaining);
-			insertDataStatement.setDouble(10,Cabin_Temperature);
-			insertDataStatement.setDouble(11,Driver_Heart_Rate);
+			insertDataStatement.setLong(1,time);
+			insertDataStatement.setDouble(2,internalVoltage);
+			insertDataStatement.setDouble(3,accel);
+			insertDataStatement.setDouble(4,SoC);
+			insertDataStatement.setDouble(5,drainRate);
+			insertDataStatement.setDouble(6,milesRemaining);
+			insertDataStatement.setDouble(7,mph);
+			insertDataStatement.setDouble(8,lat);
+			insertDataStatement.setDouble(9,lon);
+			insertDataStatement.setDouble(10,linearAccelX);
+			insertDataStatement.setDouble(11,linearAccelY);
+			insertDataStatement.setDouble(12,linearAccelZ);
+			insertDataStatement.setDouble(13,gravitationalAccelX);
+			insertDataStatement.setDouble(14,gravitationalAccelY);
+			insertDataStatement.setDouble(15,gravitationalAccelZ);
 
 			insertDataStatement.executeUpdate();
 		}
