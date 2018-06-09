@@ -10,13 +10,14 @@ import java.sql.PreparedStatement;
 public class Database {
 	protected Connection connection;
 	protected Statement statement;
+	private static final Object lock = new Object();
 	private String url = "jdbc:sqlite:"; //The Database URL, Can Be a File Path
 	/**
 	 * Constructs a Database with filename relative to UNIX time, builds tables, and starts a connection
 	 */
 	public Database(String saveLocation) {
-		long unixTime = System.currentTimeMillis() / 1000L;
-		url += saveLocation+"\\"+unixTime+".db";
+		long unixTime = System.currentTimeMillis();
+		url += saveLocation+"/"+unixTime+".db";
 		startConnection();
 		makeTables();
 		
@@ -96,52 +97,52 @@ public class Database {
 							  double milesRemaining, double mph, double lat, double lon, double linearAccelX,
 							  double linearAccelY, double linearAccelZ, double gravitationalAccelX,
 							  double gravitationalAccelY, double gravitationalAccelZ) {
-		String insertStatement = "INSERT INTO dataByTime(Time,internalVoltage,accel,SoC,drainRate,milesRemaining,mph,lat,lon,linearAccelX,linearAccelY,linearAccelZ,gravitationalAccelX,gravitationalAccelY,gravitationalAccelZ)"
-				+ "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-		
-		try {
-			long unixTime = System.currentTimeMillis();
-			PreparedStatement insertDataStatement = connection.prepareStatement(insertStatement);
-			insertDataStatement.setLong(1,time);
-			insertDataStatement.setDouble(2,internalVoltage);
-			insertDataStatement.setDouble(3,accel);
-			insertDataStatement.setDouble(4,SoC);
-			insertDataStatement.setDouble(5,drainRate);
-			insertDataStatement.setDouble(6,milesRemaining);
-			insertDataStatement.setDouble(7,mph);
-			insertDataStatement.setDouble(8,lat);
-			insertDataStatement.setDouble(9,lon);
-			insertDataStatement.setDouble(10,linearAccelX);
-			insertDataStatement.setDouble(11,linearAccelY);
-			insertDataStatement.setDouble(12,linearAccelZ);
-			insertDataStatement.setDouble(13,gravitationalAccelX);
-			insertDataStatement.setDouble(14,gravitationalAccelY);
-			insertDataStatement.setDouble(15,gravitationalAccelZ);
+		synchronized (lock) {
+			String insertStatement = "INSERT INTO dataByTime(Time,internalVoltage,accel,SoC,drainRate,milesRemaining,mph,lat,lon,linearAccelX,linearAccelY,linearAccelZ,gravitationalAccelX,gravitationalAccelY,gravitationalAccelZ)"
+					+ "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
-			insertDataStatement.executeUpdate();
+			try {
+				long unixTime = System.currentTimeMillis();
+				PreparedStatement insertDataStatement = connection.prepareStatement(insertStatement);
+				insertDataStatement.setLong(1, time);
+				insertDataStatement.setDouble(2, internalVoltage);
+				insertDataStatement.setDouble(3, accel);
+				insertDataStatement.setDouble(4, SoC);
+				insertDataStatement.setDouble(5, drainRate);
+				insertDataStatement.setDouble(6, milesRemaining);
+				insertDataStatement.setDouble(7, mph);
+				insertDataStatement.setDouble(8, lat);
+				insertDataStatement.setDouble(9, lon);
+				insertDataStatement.setDouble(10, linearAccelX);
+				insertDataStatement.setDouble(11, linearAccelY);
+				insertDataStatement.setDouble(12, linearAccelZ);
+				insertDataStatement.setDouble(13, gravitationalAccelX);
+				insertDataStatement.setDouble(14, gravitationalAccelY);
+				insertDataStatement.setDouble(15, gravitationalAccelZ);
+
+				insertDataStatement.executeUpdate();
+			} catch (SQLException e) {
+				System.out.println(e.getMessage());
+			}
 		}
-		catch(SQLException e) {
-			System.out.println(e.getMessage());
-		}
-		
 	}
 	public void addDataByLap(int Lap_Number, double Lap_Time, double Lap_Distance, double State_of_Charge, double Miles_Remaining) {
-		String insertStatement = "INSERT INTO dataByLap(Lap_Number,Lap_Time,Lap_Distance,State_of_Charge,Miles_Remaining)"
-				+ "VALUES(?,?,?,?,?)";
-		
-		try {
-			PreparedStatement insertDataStatement = connection.prepareStatement(insertStatement);
-			insertDataStatement.setInt(1,Lap_Number);
-			insertDataStatement.setDouble(2,Lap_Time);
-			insertDataStatement.setDouble(3,Lap_Distance);
-			insertDataStatement.setDouble(4,State_of_Charge);
-			insertDataStatement.setDouble(5,Miles_Remaining);
-			insertDataStatement.executeUpdate();
+		synchronized (lock) {
+			String insertStatement = "INSERT INTO dataByLap(Lap_Number,Lap_Time,Lap_Distance,State_of_Charge,Miles_Remaining)"
+					+ "VALUES(?,?,?,?,?)";
+
+			try {
+				PreparedStatement insertDataStatement = connection.prepareStatement(insertStatement);
+				insertDataStatement.setInt(1, Lap_Number);
+				insertDataStatement.setDouble(2, Lap_Time);
+				insertDataStatement.setDouble(3, Lap_Distance);
+				insertDataStatement.setDouble(4, State_of_Charge);
+				insertDataStatement.setDouble(5, Miles_Remaining);
+				insertDataStatement.executeUpdate();
+			} catch (SQLException e) {
+				System.out.println(e.getMessage());
+			}
 		}
-		catch(SQLException e) {
-			System.out.println(e.getMessage());
-		}
-		
 	}
 	
 	public Connection getConnection() {
