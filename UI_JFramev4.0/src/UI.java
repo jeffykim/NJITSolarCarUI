@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 import org.apache.logging.log4j.LogManager;
@@ -20,6 +21,8 @@ public class UI extends JFrame
     public static JLabel JLMilesRem;
     public static JLabel JLSpeed;
     public static JLabel JLPowerConsumed;
+    public static JLabel JLWarning;
+    public static TextArea WarningList;
     //public static double mph;
     //public static double SoC;
     //public static double milesRemaining;
@@ -35,9 +38,10 @@ public class UI extends JFrame
 
     private void createUserInterface()
     {
+        Color backgroundColor = Color.GRAY;
         Container contentPane = frame1.getContentPane();
         contentPane.setLayout(null);
-        contentPane.setBackground(Color.GRAY);
+        contentPane.setBackground(backgroundColor);
         contentPane.setBounds(0,0,400,500);
 
         JLayeredPane JLPane = frame1.getLayeredPane();
@@ -79,12 +83,24 @@ public class UI extends JFrame
         JLPowerConsumed.setHorizontalAlignment(SwingConstants.LEFT);
         contentPane.add(JLPowerConsumed);
 
+        JLWarning = new JLabel("Warnings:");
+        JLWarning.setBounds(600,70,200,50);
+        JLWarning.setHorizontalAlignment(SwingConstants.LEFT);
+        JLWarning.setFont(new Font("Ariel",Font.BOLD,20));
+        contentPane.add(JLWarning);
+
+        WarningList = new TextArea("None");
+        WarningList.setBounds(600,120,200,300);
+        WarningList.setFont(new Font("Ariel",Font.PLAIN,18));
+        WarningList.setBackground(backgroundColor);
+        contentPane.add(WarningList);
+        /*
         JLCar = new JLabel();
         JLCar.setBorder(BorderFactory.createLineBorder(Color.black,1));
         JLCar.setOpaque(true);
         JLCar.setBackground(Color.RED);
         JLPane.add(JLCar,0 );
-
+        */
     }
     @SuppressWarnings({ "unused" })
 	public static void main(String[] args) throws Exception
@@ -138,7 +154,13 @@ public class UI extends JFrame
             JLMilesRem.setText("Miles Remain: " + milesRemaining);
             JLSpeed.setText(mph + " mph");
             JLBatTemp.setText((int)dataFrame.packTemp+"°F");
-            JLPowerConsumed.setText(dataFrame.drainRate+"A");
+            JLPowerConsumed.setText(dataFrame.drainRate+"Amps");
+            updateWarnings(dataFrame);
+
         }
+    }
+    public static void updateWarnings(DataFrame dataFrame){
+        int warningCount = 0; //Screen only fits 12 warnings
+        //Still need to finish This
     }
 }

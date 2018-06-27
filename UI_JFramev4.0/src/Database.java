@@ -166,17 +166,20 @@ public class Database {
         synchronized (lock) {
             String insertStatement = "INSERT INTO dataByLap(Time, cell_ID, instVoltage, internalResistance, openVoltage)"
                     + "VALUES(?,?,?,?,?)";
-            for (int cellNUM = 0; cellNUM < 20; cellNUM++) {
+            for (int cellNUM = 1; cellNUM <= 20; cellNUM++) {
                 try {
                     PreparedStatement insertDataStatement = connection.prepareStatement(insertStatement);
                     insertDataStatement.setDouble(1, dataframe.timeCreated);
                     insertDataStatement.setDouble(2, dataframe.cells.get(cellNUM).get("id"));
                     insertDataStatement.setDouble(3, dataframe.cells.get(cellNUM).get("instVoltage"));
                     insertDataStatement.setDouble(4, dataframe.cells.get(cellNUM).get("internalResistance"));
-                    insertDataStatement.setDouble(5, dataframe.cells.get(cellNUM).get("internalResistance"));
+                    insertDataStatement.setDouble(5, dataframe.cells.get(cellNUM).get("openResistance"));
                     insertDataStatement.executeUpdate();
                 } catch (SQLException e) {
-                    log.error("dataByLap " + e.getMessage());
+                    log.error("cellData " + e.getMessage());
+                }
+                catch (Exception e){
+                    log.error("cellData "+ e.getMessage());
                 }
             }
         }
