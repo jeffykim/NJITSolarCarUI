@@ -159,8 +159,21 @@ public class UI extends JFrame
 
         }
     }
-    public static void updateWarnings(DataFrame dataFrame){
+    public static void updateWarnings(DataFrame dataframe){
         int warningCount = 0; //Screen only fits 12 warnings
-        //Still need to finish This
+        StringBuilder output = new StringBuilder("");
+        for(int i = 1; i<=20; i++){
+            if(dataframe.cells.get(i).get("instVoltage")<=2.7 && warningCount<12){
+                output.append("Cell "+i+" low:"+dataframe.cells.get(i).get("instVoltage")+"\n");
+            }
+            else if (dataframe.cells.get(i).get("instVoltage")<=2.7 && warningCount==11){
+                output.append("More Errors!!");
+            }
+        }
+        if(warningCount == 0){
+            output.append("NONE");
+        }
+
+        WarningList.setText(output.toString());
     }
 }
