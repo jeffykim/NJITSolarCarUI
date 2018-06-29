@@ -27,6 +27,7 @@ public class UI extends JFrame
     //public static double SoC;
     //public static double milesRemaining;
     public static Database database;
+    public static CanReader can;
     public static final Logger log = LogManager.getLogger(UI.class.getName());
 
     public UI()  
@@ -109,10 +110,17 @@ public class UI extends JFrame
         UI application = new UI();
         frame1.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE );
 
-        CanReader can = new CanReader(false);
+        can = new CanReader(false);
         can.startPollingLoop(0);
 
-        database = new Database("/home/george/Desktop"); //Path Must Be Changed
+        database = new Database();
+
+        try{
+            Thread.sleep(20000);  //To allow Cell Data to populate
+        }
+        catch (InterruptedException e){
+            log.error("UI: "+ e.getMessage());
+        }
 
         Timer timer = new Timer();
         TimerTask gen = new TimerTask()

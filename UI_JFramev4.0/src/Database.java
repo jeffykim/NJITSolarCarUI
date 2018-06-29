@@ -19,8 +19,17 @@ public class Database {
     protected Statement statement;
     private static final Object lock = new Object();
     public static final Logger log = LogManager.getLogger(Database.class.getName());
-    private String url = "jdbc:sqlite:"; //The Database URL, Can Be a File Path
-
+    private String url = "jdbc:sqlite:"; //The Start of Database URL, Can Be a File Path
+    /**
+     * Constructs a Database with filename relative to UNIX time, builds tables, and starts a connection.
+     * Save location is working directory
+     */
+    public Database() {
+        long unixTime = System.currentTimeMillis()/1000;
+        url += System.getProperty("user.dir")+ "/" + unixTime + ".db";
+        startConnection();
+        makeTables();
+    }
     /**
      * Constructs a Database with filename relative to UNIX time, builds tables, and starts a connection
      */
@@ -30,6 +39,7 @@ public class Database {
         startConnection();
         makeTables();
     }
+
 
     /**
      * To Start the Connection to the database if it was closed.

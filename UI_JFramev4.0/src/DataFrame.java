@@ -28,8 +28,7 @@ public class DataFrame {
     CanReader can;
 
     public DataFrame() throws IOException {
-        //can = new CanReader(false);
-        //can.startPollingLoop(0);
+        this.can = UI.can;
         linearAcceleration = new HashMap<>(3);
         gravitationalAcceleration = new HashMap<>(3);
         gyroData = new HashMap<>(3);
