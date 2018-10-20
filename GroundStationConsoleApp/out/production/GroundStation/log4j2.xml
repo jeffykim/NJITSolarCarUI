@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration Status="INFO">
+	<Properties>
+		<Property name="filePattern" value="%d{hh:mm:ss.SSS a} [%-5p] [%logger]: %m%n" />
+	</Properties>
+
+		<Appenders>
+		<!-- ERROR_FILE -->
+		<RollingFile name="error_file" filePattern="log/general_error/%d{yyyy-MM}/general_error-%d{MM-dd}.log" >
+			<PatternLayout pattern="${filePattern}" />			
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+			</Policies>
+			<DirectWriteRolloverStrategy />
+			<Filters>
+				<ThresholdFilter level="TRACE" onMatch="ACCEPT" onMismatch="NEUTRAL" />
+				<ThresholdFilter level="warn"  onMatch="ACCEPT"   onMismatch="NEUTRAL"/>
+				<ThresholdFilter level="error" onMatch="ACCEPT"   onMismatch="NEUTRAL"/>
+				<ThresholdFilter level="fatal" onMatch="ACCEPT"   onMismatch="NEUTRAL"/>
+			</Filters>
+		</RollingFile>
+		
+
+		<Console name="std_out" target="SYSTEM_OUT">
+			<PatternLayout pattern="${filePattern}"/>
+		</Console>
+		
+		<Console name="std_err" target="SYSTEM_ERR">
+			<PatternLayout pattern="${filePattern}"/>
+			<Filters>
+				<ThresholdFilter level="WARN" onMatch="ACCEPT" onMismatch="DENY" />
+			</Filters>
+		</Console>
+	</Appenders>
+	
+
+	<Loggers>
+		<Root level="INFO" >
+			<AppenderRef ref="error_file" />
+		</Root>
+	</Loggers>
+	
+</Configuration>
