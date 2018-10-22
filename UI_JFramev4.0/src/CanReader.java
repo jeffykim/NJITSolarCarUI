@@ -9,7 +9,6 @@
 import java.io.IOException;
 import java.util.HashMap;
 
-
 import javax.xml.bind.DatatypeConverter;
 
 import de.entropia.can.CanSocket;
@@ -389,6 +388,7 @@ public class CanReader
 				lsbRPM = data[1];
 				RPM = (msbRPM << 8)|lsbRPM;
 				mph = (int) ((RPM)*.0673092176);
+				break;
 			}
 			default: {
 				System.err.println("Unknown Frame ID: " +id);
